@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- Color definitions for the UI in the templates.
+
+     !!! IMPORTANT !!!
+     Do not refer to these colors directly from views. Colors must be referred
+     to through theme attributes (in attrs.xml).
+
+     !!! IMPORTANT !!!
+     Do not define colors with a RGB value in here (e.g. #FF9B4DF8). These
+     colors should all refer to colors defined in  @color/default.
+
+     If you need a color that's not there already, make a change to add it and
+     get that approved. -->
+<resources>
+  <!-- Status bar. -->
+  <color name="template_status_bar_end_color">@color/default_black</color>
+
+  <!-- Night mode color scheme for map markers. -->
+  <color name="template_marker_default_background_color">@color/default_white</color>
+  <color name="template_marker_map_default_content_color">@color/default_black</color>
+  <color name="template_marker_list_default_content_color">@color/default_white</color>
+  <color name="template_marker_custom_background_content_color">@color/default_black</color>
+  <color name="template_marker_default_border_color">@color/default_black</color>
+  <color name="template_marker_custom_border_color">@color/default_black</color>
+  <color name="template_anchor_default_background_color">@color/default_white</color>
+  <color name="template_anchor_border_color">@color/default_black</color>
+  <color name="template_anchor_dot_color">@color/default_gradient_black_64</color>
+</resources>

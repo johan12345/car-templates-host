@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <!--  Inactive state -->
+  <item app:templateFocusStateInactive="true" android:color="?templateFocusRingNoAccentColor"/>
+
+  <!--  Default -->
+  <item android:color="?templateFocusRingColor"/>
+</selector>

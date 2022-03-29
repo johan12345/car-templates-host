@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- Standard dimensions for all template widgets.
+
+     These dimensions can be referenced directly from widgets without going
+     through a theme attribute.
+
+     See go/watevra-visd. -->
+<resources>
+
+  <dimen name="default_padding_0">4dp</dimen>
+  <dimen name="default_padding_1">8dp</dimen>
+  <dimen name="default_padding_2">12dp</dimen>
+  <dimen name="default_padding_3">16dp</dimen>
+  <dimen name="default_padding_4">24dp</dimen>
+  <dimen name="default_padding_5">32dp</dimen>
+  <dimen name="default_padding_6">48dp</dimen>
+  <dimen name="default_padding_7">64dp</dimen>
+  <dimen name="default_padding_8">96dp</dimen>
+
+  <dimen name="default_height_keyline_0">0dp</dimen>
+  <dimen name="default_height_keyline_1">8dp</dimen>
+  <dimen name="default_height_keyline_2">12dp</dimen>
+  <dimen name="default_height_keyline_3">16dp</dimen>
+  <dimen name="default_width_keyline_0">4dp</dimen>
+  <dimen name="default_width_keyline_1">8dp</dimen>
+  <dimen name="default_width_keyline_2">8dp</dimen>
+  <dimen name="default_width_keyline_3">16dp</dimen>
+
+  <dimen name="default_touch_target_minimum_size">68dp</dimen>
+  <dimen name="default_edge_column_width">@dimen/default_touch_target_minimum_size</dimen>
+  <dimen name="default_edge_column_margin">@dimen/default_width_keyline_1</dimen>
+  <dimen name="default_edge_column_width_padded">84dp</dimen>
+
+  <dimen name="default_body1_text_size">32dp</dimen>
+  <dimen name="default_body1_line_height">40dp</dimen>
+  <item name="default_body1_letter_spacing" format="float" type="dimen">0.0094</item>
+
+  <dimen name="default_body2_text_size">28dp</dimen>
+  <dimen name="default_body2_line_height">36dp</dimen>
+  <item name="default_body2_letter_spacing" format="float" type="dimen">0.0107</item>
+
+  <dimen name="default_body3_text_size">24dp</dimen>
+  <dimen name="default_body3_line_height">32dp</dimen>
+  <item name="default_body3_letter_spacing" format="float" type="dimen">0.0250</item>
+
+  <dimen name="default_display1_text_size">56dp</dimen>
+  <dimen name="default_display1_line_height">64dp</dimen>
+  <item name="default_display1_letter_spacing" format="float" type="dimen">0.0000</item>
+
+  <dimen name="default_display2_text_size">44dp</dimen>
+  <dimen name="default_display2_line_height">52dp</dimen>
+  <item name="default_display2_letter_spacing" format="float" type="dimen">0.0023</item>
+
+  <dimen name="default_display3_text_size">36dp</dimen>
+  <dimen name="default_display3_line_height">44dp</dimen>
+  <item name="default_display3_letter_spacing" format="float" type="dimen">0.0055</item>
+
+  <!-- PagedListView -->
+  <dimen name="default_paged_list_view_max_content_width">704dp</dimen>
+
+  <!-- Focus -->
+  <dimen name="default_focus_ring_stroke_width_hovered">4dp</dimen>
+  <dimen name="default_focus_ring_stroke_width_focused">6dp</dimen>
+
+  <!-- Apps Space -->
+  <dimen name="default_canvas_max_width">794dp</dimen>
+  <dimen name="default_list_item_corner_radius">8dp</dimen>
+  <dimen name="default_no_content_focus_background_corner_radius">16dp</dimen>
+
+  <!-- Edit Text -->
+  <!-- Use a negative padding value to draw the focus ring outside the edit text. -->
+  <dimen name="default_edit_text_focus_ring_padding">-6dp</dimen>
+  <dimen name="default_edit_text_focus_ring_radius">12dp</dimen>
+
+</resources>

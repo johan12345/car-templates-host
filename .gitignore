@@ -1,0 +1,7 @@
+Host/build/**
+Host/.gradle/**
+Host/.idea/**
+Host/app/build/**
+Host/app/apphost/build/**
+Host/app/renderer/build/**
+

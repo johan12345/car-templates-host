@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Style definitions for the UI in the templates.
+
+       !!! IMPORTANT !!!
+       Do not refer to these styles directly from views. Styles must be referred
+       to through theme attributes (in attrs.xml). -->
+  <style name="Template" parent="Theme.Template"/>
+
+  <!-- The appearance of the markers in the map view. -->
+  <style name="TextAppearance.Marker" parent="TextAppearance.Template.Body3.Medium"/>
+
+  <style name="MarkerAppearance" parent="TextAppearance.Marker">
+    <item name="markerDefaultBackgroundColor">@color/template_marker_default_background_color</item>
+    <item name="markerCustomBackgroundContentColor">@color/template_marker_custom_background_content_color</item>
+    <item name="markerDefaultBorderColor">@color/template_marker_default_border_color</item>
+    <item name="markerCustomBorderColor">@color/template_marker_custom_border_color</item>
+    <item name="markerPointerWidth">@dimen/template_marker_pointer_width</item>
+    <item name="markerPointerHeight">@dimen/template_marker_pointer_height</item>
+    <item name="markerStroke">@dimen/template_marker_stroke</item>
+    <item name="markerCornerRadius">@dimen/template_marker_corner_radius</item>
+    <item name="markerPadding">@dimen/template_marker_padding</item>
+
+    <item name="anchorDefaultBackgroundColor">@color/template_anchor_default_background_color</item>
+    <item name="anchorBorderColor">@color/template_anchor_border_color</item>
+    <item name="anchorDotColor">@color/template_anchor_dot_color</item>
+
+    <item name="markerTextHorizontalPadding">@dimen/template_marker_text_horizontal_padding</item>
+    <item name="markerIconSize">@dimen/template_marker_icon_size</item>
+    <item name="markerImageSize">@dimen/template_marker_image_size</item>
+    <item name="markerImageCornerRadius">@dimen/template_marker_image_corner_radius</item>
+
+    <item name="markerListIconSize">?templateHalfRowImageSize</item>
+  </style>
+
+  <style name="MarkerAppearance.Template.Map" parent="MarkerAppearance">
+    <item name="markerDefaultContentColor">@color/template_marker_map_default_content_color</item>
+  </style>
+
+  <style name="MarkerAppearance.Template.List" parent="MarkerAppearance">
+    <item name="markerDefaultContentColor">@color/template_marker_list_default_content_color</item>
+  </style>
+
+  <!-- The style of an action button. -->
+  <style name="Widget.Template.ActionButton">
+    <item name="android:foreground">?templateActionButtonForeground</item>
+    <item name="android:background">?templateActionButtonBackground</item>
+  </style>
+
+  <!-- The style of a FAB. -->
+  <style name="Widget.Template.Fab">
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+    <item name="android:orientation">horizontal</item>
+    <item name="android:gravity">center</item>
+    <item name="android:elevation">6dp</item>
+  </style>
+
+  <!-- The appearance of a FAB when actually displayed as floating, e.g.
+       over a map surface. -->
+  <style name="FabAppearance.Template.Fab" parent="Widget.Template.Fab">
+    <item name="android:background">@drawable/action_strip_fab_view_background</item>
+    <item name="android:foreground">@drawable/action_strip_button_view_focus_ring</item>
+    <item name="fabDefaultContentColor">@color/template_action_strip_fab_content_color</item>
+  </style>
+
+  <!-- The appearance of a FAB when displayed in a full screen template. -->
+  <style name="FabAppearance.Template.FullTemplate" parent="Widget.Template.Fab">
+    <item name="android:background">@drawable/action_strip_button_view_background</item>
+    <item name="android:foreground">@drawable/action_strip_button_view_focus_ring</item>
+    <item name="fabDefaultContentColor">@color/default_white</item>
+  </style>
+
+  <!-- The style of a loading spinner. -->
+  <style name="Widget.Template.Spinner">
+    <item name="android:indeterminateDrawable">@drawable/default_progress_spinner</item>
+    <item name="android:indeterminate">true</item>
+  </style>
+
+  <!-- The style of a content container. -->
+  <style name="Widget.Template.Container">
+    <item name="android:background">@drawable/car_ui_activity_background</item>
+  </style>
+
+  <!-- The style of a content container on a surface template. -->
+  <style name="Widget.Template.Container.Surface">
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:paddingRight">@dimen/template_plain_content_container_padding</item>
+  </style>
+
+  <!-- The style of a plain content container. -->
+  <style name="Widget.Template.Container.Plain" />
+
+  <!-- The style of a card content container. -->
+  <style name="Widget.Template.Container.Card">
+    <item name="cardBackgroundColor">@color/template_card_background_color</item>
+    <item name="cardTextColor">@color/template_text_color_primary</item>
+    <item name="cardFallbackDarkBackgroundColor">@color/default_gray_928</item>
+    <item name="cardFallbackLightBackgroundColor">@color/template_white</item>
+    <item name="cardBorderColor">@color/template_card_content_container_border_color</item>
+    <item name="cardBorderWidth">@dimen/template_card_content_container_border_width</item>
+    <item name="cardRadius">?templateCornerRadius</item>
+    <item name="android:elevation">@dimen/template_card_content_container_elevation</item>
+  </style>
+
+  <!-- The style of a card content container with a content view (e.g. list). -->
+  <style name="Widget.Template.Container.Card.Content">
+    <item name="cardWidthFraction">@dimen/template_card_content_container_width_fraction</item>
+    <item name="cardMinWidth">@dimen/template_card_content_container_min_width</item>
+    <item name="cardMaxWidth">@dimen/template_card_content_container_max_width</item>
+    <item name="cardOemWidth">@dimen/car_app_ui_card_width</item>
+    <item name="cardOemMaxWidth">@dimen/template_card_content_container_oem_max_width</item>
+  </style>
+
+  <!-- The style of a card content container with the routing information. -->
+  <style name="Widget.Template.Container.Card.Content.Routing">
+    <item name="cardWidthFraction">@dimen/template_steps_card_content_container_width_fraction</item>
+    <item name="cardMinWidth">@dimen/template_steps_card_content_container_min_width</item>
+    <item name="cardMaxWidth">@dimen/template_steps_card_content_container_max_width</item>
+    <item name="cardOemWidth">@dimen/car_app_ui_nav_card_width</item>
+    <item name="cardOemMaxWidth">@dimen/template_steps_card_content_container_oem_max_width</item>
+  </style>
+
+  <!-- The style of a button in a content view. -->
+  <style name="Widget.Template.ContentButton">
+    <item name="android:scaleType">center</item>
+    <item name="android:tint">@color/template_content_button_color</item>
+    <item name="android:tintMode">src_atop</item>
+  </style>
+
+  <!-- The style of a list of rows, plain style. -->
+  <style name="Widget.Template.RowList">
+    <item name="listWidthFraction">@dimen/template_adaptive_width_fraction</item>
+    <item name="listMaxWidth">@dimen/template_row_list_max_width</item>
+    <item name="listScrollbarWidth">@dimen/template_paged_list_scrollbar_width</item>
+    <item name="listShowScrollbarDivider">false</item>
+  </style>
+
+  <!-- The style of a list of rows, card style. -->
+  <style name="Widget.Template.RowList.Card">
+    <item name="listScrollbarWidth">@dimen/template_paged_list_scrollbar_width_card</item>
+    <item name="listNoScrollBarStartPadding">@dimen/template_row_list_no_scrollbar_start_padding_card</item>
+    <!-- Card widths are not adaptive. -->
+    <item name="listWidthFraction">-1.0</item>
+    <item name="listShowScrollbarDivider">true</item>
+  </style>
+
+  <!-- The style of a grid, plain style. -->
+  <style name="Widget.Template.Grid">
+    <item name="listWidthFraction">@dimen/template_adaptive_width_fraction</item>
+    <item name="listMaxWidth">@dimen/template_grid_max_width</item>
+    <item name="listScrollbarWidth">@dimen/template_paged_list_scrollbar_width</item>
+    <item name="listShowScrollbarDivider">false</item>
+  </style>
+
+  <!-- The style of the title text in a grid item. -->
+  <style name="Widget.Template.Text.GridItemTitle">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.GridItemTitle</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+  <!-- The style of the secondary text line below the title in a grid item. -->
+  <style name="Widget.Template.Text.GridItemText">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.GridItemText</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+  <!-- The style of text that indicates a grid is empty -->
+  <style name="Widget.Template.GridEmpty" parent="Widget.CarAppUi.RowSecondary">
+    <item name="android:maxLines">2</item>
+    <item name="android:gravity">center</item>
+    <!-- TODO(b/174717763): overriding body3's letter spacing since it seems to cause
+         centered text to be incorrectly cropped -->
+    <item name="android:letterSpacing">0</item>
+  </style>
+
+  <style name="Widget.Template.Routing"/>
+
+  <!-- The style of the text showing the title of the routing card when in
+       arrived state. -->
+  <style name="Widget.Template.Routing.MessagePrimary">
+    <item name="android:textAppearance">@style/TextAppearance.Template.NavCardLargeText</item>
+    <item name="android:maxLines">2</item>
+  </style>
+
+  <!-- The style of the text showing the destination address in the routing
+     card when in arrived state. -->
+  <style name="Widget.Template.Routing.MessageSecondary">
+    <item name="android:textAppearance">@style/TextAppearance.Template.NavCardSmallText</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:lineSpacingExtra">5sp</item>
+  </style>
+
+  <style name="Widget.Template.Routing.Distance">
+    <item name="android:textAppearance">@style/TextAppearance.Template.NavCardXLargeText</item>
+  </style>
+
+  <style name="Widget.Template.Routing.Description">
+    <item name="android:textAppearance">@style/TextAppearance.Template.NavCardMediumText</item>
+    <item name="android:maxLines">2</item>
+  </style>
+
+  <style name="Widget.Template.Routing.CompactDescription">
+    <item name="android:textAppearance">@style/TextAppearance.Template.NavCardSmallText</item>
+    <item name="android:maxLines">1</item>
+  </style>
+
+  <style name="Widget.Template.Routing.TravelEstimate">
+    <item name="android:textAppearance">@style/TextAppearance.Template.NavCardSmallText</item>
+    <item name="android:maxLines">1</item>
+  </style>
+
+  <!-- Routing card textAppearance -->
+  <style name="TextAppearance.Template.NavCardSmallText" parent="TextAppearance.CarUi.Body3" />
+  <style name="TextAppearance.Template.NavCardMediumText" parent="TextAppearance.CarUi.Body2" />
+  <style name="TextAppearance.Template.NavCardLargeText" parent="TextAppearance.CarUi.Body1" >
+    <item name="android:textSize">?templateNavCardLargeTextSize</item>
+  </style>
+  <style name="TextAppearance.Template.NavCardXLargeText" parent="TextAppearance.CarUi.Body1">
+    <item name="android:textSize">?templateNavCardXLargeTextSize</item>
+  </style>
+
+  <!-- The style of the title text inside of the message template. -->
+  <style name="Widget.Template.Text.Message">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.TextBlock</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+  <!-- The style of the title text inside of the long message template. -->
+  <style name="Widget.Template.Text.LongMessage">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.TextBlock</item>
+    <item name="android:maxLines">2147483647</item>
+  </style>
+
+  <!-- The style of text inside of a debug info inside of the message template. -->
+  <style name="Widget.Template.Debug" parent="Widget.Template.Text.Body3">
+    <item name="android:maxLines">1024</item>
+    <item name="android:textColor">@color/template_message_debug_text_color</item>
+    <item name="android:fontFamily">monospace</item>
+    <item name="android:textSize">@dimen/template_message_debug_text_size</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/template_message_debug_text_line_height</item>
+  </style>
+
+  <style name="Widget.Template.SignIn"/>
+
+  <!-- The style of the container of sign-in content. -->
+  <style name="Widget.Template.SignIn.Container">
+    <item name="android:gravity">?templatePlainContentGravity</item>
+    <item name="android:layout_gravity">?templatePlainContentLayoutGravity</item>
+    <item name="android:layout_marginHorizontal">?templatePlainContentHorizontalPadding</item>
+  </style>
+
+  <!-- The style of the instruction text inside the sign-in template. -->
+  <style name="Widget.Template.SignIn.InstructionText">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.SignInHeader</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+  <!-- The style of a provider sign-in button. -->
+  <style name="Widget.Template.SignIn.ProviderSignInbutton" parent="Widget.Template.ActionButton">
+    <item name="textMaxEms">@integer/template_provider_sign_in_button_text_max_ems</item>
+  </style>
+
+  <!-- The style of the PIN text inside the sign-in template. -->
+  <style name="Widget.Template.SignIn.PinText">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.ReadOnlyText</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:gravity">center</item>
+    <item name="android:letterSpacing">@dimen/template_sign_in_pin_text_letter_spacing</item>
+  </style>
+
+  <!-- The style of the additional text inside the sign-in template. -->
+  <style name="Widget.Template.SignIn.AdditionalText">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.SignInLegal</item>
+    <item name="android:maxLines">3</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@color/template_sign_in_additional_text_color</item>
+    <item name="android:textColorLink">?templateHyperlinkTextColor</item>
+    <item name="android:linksClickable">true</item>
+  </style>
+
+  <!-- The style of the error message inside the sign-in template. -->
+  <style name="Widget.Template.SignIn.ErrorMessage" parent="Widget.Template.Text.Body3">
+    <item name="android:maxLines">1</item>
+    <item name="android:gravity">start</item>
+    <item name="android:textColor">@color/template_sign_in_error_message_color</item>
+    <item name="android:textSize">@dimen/template_sign_in_input_error_message_text_size</item>
+    <item name="android:layout_marginStart">?templateEditTextErrorHorizontalSpacing</item>
+    <item name="android:layout_marginTop">?templateEditTextErrorVerticalSpacing</item>
+  </style>
+
+  <!-- The style of the text in an action button. -->
+  <style name="Widget.Template.Text.ActionButton">
+    <item name="android:textAppearance">@style/TextAppearance.CarAppUi.ButtonText</item>
+    <item name="android:textColor">@color/car_app_ui_action_button_text_color</item>
+  </style>
+
+  <!-- Standard styles for all template widgets.
+
+         These styles can be referenced directly from widgets without using a
+         theme attribute.
+
+         See go/watevra-visd. -->
+  <style name="TextAppearance.Template" parent="TextAppearance.Design"/>
+
+  <!-- Styles for display text, meant for larger text like titles and such. -->
+  <style name="TextAppearance.Template.Display1" parent="TextAppearance.Design.Display1"/>
+  <style name="TextAppearance.Template.Display2" parent="TextAppearance.Design.Display2"/>
+  <style name="TextAppearance.Template.Display2.Medium" parent="TextAppearance.Design.Display2.Medium"/>
+  <style name="TextAppearance.Template.Display3" parent="TextAppearance.Design.Display3"/>
+
+  <!-- Styles for body text, meant for smaller text like list row contents.  -->
+  <style name="TextAppearance.Template.Body1" parent="TextAppearance.Design.Body1"/>
+  <style name="TextAppearance.Template.Body2" parent="TextAppearance.Design.Body2"/>
+  <style name="TextAppearance.Template.Body3" parent="TextAppearance.Design.Body3"/>
+  <style name="TextAppearance.Template.Body3.Medium" parent="TextAppearance.Design.Body3.Medium"/>
+
+  <style name="Widget"/>
+  <style name="Widget.Template"/>
+
+  <!-- Base style for text widgets. -->
+  <style name="Widget.Template.Text">
+    <item name="android:maxLines">1</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <!-- Styles for text widgets. There's one per typographic style as declare in
+       the specification:
+       https://designguidelines.withgoogle.com/automotive-os-apps/visual-foundations/typography.html#typography-scale-grid-references
+
+       Note certain paragraph-level attributes such as `lineHeight` can't be
+       folded into the `TextAppearance` hence why we need to declare these as
+       part of a style.  -->
+  <style name="Widget.Template.Text.Display1">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Display1</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/default_display1_line_height</item>
+    <item name="android:letterSpacing">@dimen/default_display1_letter_spacing</item>
+  </style>
+
+  <style name="Widget.Template.Text.Display2">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Display2</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/default_display2_line_height</item>
+    <item name="android:letterSpacing">@dimen/default_display2_letter_spacing</item>
+  </style>
+
+  <style name="Widget.Template.Text.Display3">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Display3</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/default_display3_line_height</item>
+    <item name="android:letterSpacing">@dimen/default_display3_letter_spacing</item>
+  </style>
+
+  <style name="Widget.Template.Text.Body1">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Body1</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/default_body1_line_height</item>
+    <item name="android:letterSpacing">@dimen/default_body1_letter_spacing</item>
+  </style>
+
+  <style name="Widget.Template.Text.Body2">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Body2</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/default_body2_line_height</item>
+    <item name="android:letterSpacing">@dimen/default_body2_letter_spacing</item>
+  </style>
+
+  <style name="Widget.Template.Text.Body3">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Body3</item>
+    <item name="android:lineHeight" tools:ignore="NewApi">@dimen/default_body3_line_height</item>
+    <item name="android:letterSpacing">@dimen/default_body3_letter_spacing</item>
+  </style>
+
+  <style name="Widget.Template.Text.Body3.Medium">
+    <item name="android:textAppearance">@style/TextAppearance.Template.Body3.Medium</item>
+  </style>
+</resources>

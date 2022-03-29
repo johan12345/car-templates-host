@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!--
+    The MapViewContainer is added programmatically here.
+    On configuration changes, the MapView is removed and re-added so that the
+    map can instantiate in the correct day/night mode.
+    TODO(b/159348229): update this once MapView has an explicit API to do this.
+  -->
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/content_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <include
+        android:id="@+id/card_container"
+        android:layout_width="?templateCardContentContainerDefaultWidth"
+        android:layout_height="0dp"
+        android:layout_marginStart="?templateCardContentContainerStartMargin"
+        android:layout_marginTop="?templateCardContentContainerTopMargin"
+        app:layout_goneMarginTop="?templateCardContentContainerTopMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_strip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_min="?templateCardContentContainerMinHeight"
+        layout="@layout/card_container"/>
+
+    <include
+        android:id="@+id/action_strip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/action_strip_view_floating"/>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

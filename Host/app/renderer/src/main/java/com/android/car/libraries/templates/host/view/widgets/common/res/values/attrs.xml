@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+  <declare-styleable name="BleedingCardView">
+    <attr name="cardRadius" format="dimension"/>
+    <attr name="cardBackgroundColor" format="color"/>
+    <attr name="cardTextColor" format="color"/>
+
+    <!-- The colors used if there is not enough contrast ratio between
+         cardBackgroundColor and cardTextColor. -->
+    <attr name="cardFallbackDarkBackgroundColor" format="color" />
+    <attr name="cardFallbackLightBackgroundColor" format="color" />
+
+    <attr name="cardBorderWidth" format="dimension"/>
+    <attr name="cardBorderColor" format="color" />
+    <attr name="cardMinWidth" format="dimension" />
+    <attr name="cardMaxWidth" format="dimension" />
+
+    <!-- The OEM-defined card width.
+     The value set by the OEM cannot be larger than cardOemMaxWidth. -->
+    <attr name="cardOemWidth" format="dimension" />
+    <attr name="cardOemMaxWidth" format="dimension" />
+
+    <!-- The card width fraction in comparison to the parent view.
+         Zero means we use the layout_width, not the fraction. -->
+    <attr name="cardWidthFraction" format="float" />
+  </declare-styleable>
+
+  <declare-styleable name="ListView">
+    <!-- The fraction of the screen width that the list will take, up to the max
+         defined by `listMaxWidth`. A negative value indicates that the list
+         does ot use an adaptive width. -->
+    <attr name="listWidthFraction" format="float"/>
+
+    <!-- The maximum width a row list will use regardless of the
+     screen width. -->
+    <attr name="listMaxWidth" format="dimension" />
+
+    <!-- The width of the scrollbar next to the list. -->
+    <attr name="listScrollbarWidth" format="float"/>
+
+    <!-- The start padding of the list without a scrollbar. -->
+    <attr name="listNoScrollBarStartPadding" format="dimension"/>
+
+    <!-- Whether to show the scrollbar divider. -->
+    <attr name="listShowScrollbarDivider" format="boolean"/>
+  </declare-styleable>
+
+  <declare-styleable name="RowListView">
+    <!-- Whether to show the compact row layout. -->
+    <attr name="listUseCompactRowLayout" format="boolean"/>
+  </declare-styleable>
+
+  <declare-styleable name="PlaceMarker">
+    <!-- Appearance of the map markers. -->
+    <attr name="markerAppearance" format="reference" />
+  </declare-styleable>
+
+  <declare-styleable name="MarkerAppearance">
+    <!-- Colors of the POI marker. -->
+    <attr name="markerDefaultBackgroundColor" format="color" />
+
+    <!-- Color that should be used for the content if it has a default bg -->
+    <attr name="markerDefaultContentColor" format="color" />
+
+    <!-- Color that should be used for the content if it has a custom bg -->
+    <attr name="markerCustomBackgroundContentColor" format="color" />
+
+    <!-- Color that should be used for the border if it is a default bg -->
+    <attr name="markerDefaultBorderColor" format="color" />
+
+    <!-- Color that should be used for the border if it is a custom bg -->
+    <attr name="markerCustomBorderColor" format="color" />
+
+    <attr name="markerPointerWidth" format="dimension" />
+    <attr name="markerPointerHeight" format="dimension" />
+    <attr name="markerStroke" format="dimension" />
+    <attr name="markerCornerRadius" format="dimension" />
+    <attr name="markerPadding" format="dimension" />
+
+    <!-- Colors of the anchor marker. -->
+    <attr name="anchorDefaultBackgroundColor" format="color" />
+    <attr name="anchorBorderColor" format="color" />
+    <attr name="anchorDotColor" format="color" />
+
+    <!-- The following android attributes are used for the marker label style. -->
+    <attr name="android:textSize" />
+    <attr name="android:fontFamily" />
+    <attr name="android:textStyle" />
+
+    <!-- The size of the label within the marker. -->
+    <attr name="markerTextHorizontalPadding" format="dimension" />
+    <attr name="markerIconSize" format="dimension" />
+    <attr name="markerImageSize" format="dimension" />
+    <attr name="markerImageCornerRadius" format="dimension" />
+
+    <!-- The size of the marker icon in the list. -->
+    <attr name="markerListIconSize" format="dimension" />
+  </declare-styleable>
+
+  <declare-styleable name="ActionStripView">
+    <!-- Appearance of the action strip fabs. -->
+    <attr name="fabAppearance" format="reference" />
+  </declare-styleable>
+
+  <!-- Styleable for different attributes to configure what an action strip FAB should look like. -->
+  <declare-styleable name="FabAppearance">
+    <!-- The color that should be used for contents (icon+label) inside the FAB. -->
+    <attr name="fabDefaultContentColor" format="color" />
+  </declare-styleable>
+
+  <!-- Styleable for configuring the action button -->
+  <declare-styleable name="ActionButtonView">
+    <!-- Specifies the maxEms value for the action button text. Needed to customize the maxEms value for some action buttons -->
+    <attr name="textMaxEms" format="integer"/>
+  </declare-styleable>
+
+  <!-- Styleable for configuring the car image view -->
+  <declare-styleable name="CarImageView">
+    <!-- The minimum image width. -->
+    <attr name="imageMinWidth" format="dimension" />
+
+    <!-- The maximum image width. -->
+    <attr name="imageMaxWidth" format="dimension" />
+
+    <!-- The minimum image height. -->
+    <attr name="imageMinHeight" format="dimension" />
+
+    <!-- The maximum image height. -->
+    <attr name="imageMaxHeight" format="dimension" />
+  </declare-styleable>
+
+  <!-- Styleable for configuring the car progress bar -->
+  <declare-styleable name="CarProgressBar">
+    <!-- The minimum image size. -->
+    <attr name="imageMinSize" format="dimension" />
+
+    <!-- The maximum image size. -->
+    <attr name="imageMaxSize" format="dimension" />
+  </declare-styleable>
+
+  <!-- Custom error state to be used in edit boxes or other components that support this state -->
+  <declare-styleable name="ErrorState">
+    <attr name="state_error" format="boolean"/>
+  </declare-styleable>
+</resources>

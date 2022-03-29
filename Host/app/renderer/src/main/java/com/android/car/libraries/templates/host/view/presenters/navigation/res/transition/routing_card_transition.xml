@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="together">
+  <targets>
+    <target android:targetId="@id/content_container" />
+    <target android:targetId="@id/travel_estimate_card_container" />
+    <target android:targetId="@id/pan_overlay" />
+  </targets>
+  <fade
+      android:fadingMode="fade_in_out"
+      android:duration="@integer/routing_card_animation_duration_millis">
+    <targets>
+      <target android:excludeId="@id/detailed_step_view" />
+      <target android:excludeId="@id/travel_estimate_card_container" />
+    </targets>
+  </fade>
+  <changeBounds
+      android:duration="@integer/routing_card_animation_duration_millis"
+      android:interpolator="@interpolator/fast_out_slow_in"/>
+</transitionSet>

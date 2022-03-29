@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+  <!-- List of the resource that can be customized by the OEMs by using
+       Runtime Resource Overlays.
+
+       !!! IMPORTANT !!!
+
+       Comments on this file are used to produce automatically generated
+       documentation available at https://docs.partner.android.com/gas/integrate/template_host.
+
+       Once per AAOS Host release, the following tool should be used to re-generate the publicly
+       documented resource list. This list constitutes an API with the OEMs. DO NOT remove or
+       rename an existing resource without a corresponding deprecation cycle.
+
+       third_party/java_src/android_libs/car/aaos_host/main/com/android/car/libraries/templates/host/overlayable/tools/generateDoc.py
+       -->
+  <overlayable name="OverlayableResources">
+    <policy type="system|product|vendor|signature">
+
+      <!-- Indicates whether OEMs have done any UI customizations. This value should be set to true
+           by the OEMs who wish to provide UI customization. -->
+      <item type="bool" name="car_app_ui_customized" />
+      <!-- Indicates whether OEMs choose to ignore app provided colors on
+           buttons on select templates. This value should be set to true by the
+           OEMs who wish to ignore app provided colors on buttons on select
+           templates. -->
+      <item type="bool" name="car_app_ui_is_action_color_overridden" />
+      <!-- Indicates whether buttons in the action button list (e.g. used in PaneTemplate)
+           stretch to fill the horizontal space. -->
+      <item type="bool" name="car_app_ui_action_button_list_button_stretch_horizontal" />
+
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_red" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_red_dark" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_green" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_green_dark" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_blue" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_blue_dark" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_yellow" />
+      <!-- Car App Library standard color. -->
+      <item type="color" name="car_app_ui_standard_yellow_dark" />
+      <!-- Default background color used on 'Action' buttons when one is not provided by the
+           application. -->
+      <item type="color" name="car_app_ui_action_button_default_background_color" />
+      <!-- Background color used on 'Action' buttons marked as 'Primary', when one is not provided
+           by the application. -->
+      <item type="color" name="car_app_ui_action_button_primary_background_color" />
+      <!-- Text color used on 'Action' buttons when one is not provided by the application. -->
+      <item type="color" name="car_app_ui_action_button_text_color" />
+      <!-- Background color used on FABs (floating action buttons) when one is not provided by the
+           application. -->
+      <item type="color" name="car_app_ui_floating_button_default_background_color" />
+      <!-- Text color used on FABs (floating action buttons) when one is not provided by the
+           application. -->
+      <item type="color" name="car_app_ui_floating_button_default_text_color" />
+      <!-- Text color used on read-only text boxes (such as the PIN code in Sign-In template). -->
+      <item type="color" name="car_app_ui_read_only_text_color" />
+      <!-- Background color used on read-only text boxes (such as the PIN code in Sign-In
+           template). -->
+      <item type="color" name="car_app_ui_read_only_text_background_color" />
+      <!-- Edit box 'active' text color (such as the username and password in Sign-In template). -->
+      <item type="color" name="car_app_ui_edit_text_active_color" />
+      <!-- Edit box 'enabled' text color (such as the username and password in Sign-In template). -->
+      <item type="color" name="car_app_ui_edit_text_enabled_color" />
+      <!-- Edit box 'error' text color (such as the username and password in Sign-In template). -->
+      <item type="color" name="car_app_ui_edit_text_error_color" />
+      <!-- Edit box 'disabled' text color (such as the username and password in Sign-In template). -->
+      <item type="color" name="car_app_ui_edit_text_disabled_color"/>
+      <!-- Text color used in 'clickable spans' (such as the ones allowed in Sign-In template). -->
+      <item type="color" name="car_app_ui_hyperlink_text_color" />
+      <!-- The background color of a row container view to check color contrast against its contents.
+           This color is used only for color contrast checks, and not for actual background coloring.
+           Set an appropriate value if the row background color is customized. -->
+      <item type="color" name="car_app_ui_row_background_color" />
+      <!-- The background color of a grid item view to check color contrast against its contents.
+           This color is used only for color contrast checks, and not for actual background coloring.
+           Set an appropriate value if the grid background color is customized. -->
+      <item type="color" name="car_app_ui_grid_item_background_color" />
+
+      <!-- Vertical space between an image and a text -->
+      <item type="dimen" name="car_app_ui_image_to_text_spacing_vertical" />
+      <!-- Vertical space between a text and a control (such as an edit box to instruction text). -->
+      <item type="dimen" name="car_app_ui_text_to_control_spacing_vertical" />
+      <!-- Vertical space between a text and a secondary control (such as an action button list view to additional text). -->
+      <item type="dimen" name="car_app_ui_text_to_secondary_control_spacing_vertical" />
+      <!-- Vertical space between a control (such as an edit box) and a text. -->
+      <item type="dimen" name="car_app_ui_control_to_text_spacing_vertical" />
+      <!-- Horizontal space between two controls (such two buttons in an Action Strip). -->
+      <item type="dimen" name="car_app_ui_control_to_control_spacing_horizontal" />
+      <!-- Horizontal space around content areas such as full screen lists and grids. -->
+      <item type="dimen" name="car_app_ui_content_horizontal_margin" />
+      <!-- Touch target size, used to define the size of header buttons, for example. -->
+      <item type="dimen" name="car_app_ui_touch_target_size" />
+      <!-- Corner radius used across the UI except for the buttons. -->
+      <item type="dimen" name="car_app_ui_corner_radius" />
+      <!-- Card width (expect for navigation card). If not set, the card width will be defined by
+           the host in proportion to the screen size. This value must be within the template host
+           defined range. -->
+      <item type="dimen" name="car_app_ui_card_width" />
+      <!-- Width and height of large images (such as list and grid items, and message and
+           sign-in images. -->
+      <item type="dimen" name="car_app_ui_large_image_size" />
+      <!-- Vertical space between the nav card content and its container. -->
+      <item type="dimen" name="car_app_ui_nav_card_padding_vertical" />
+      <!-- Horizontal space between the navigation card content and its container. -->
+      <item type="dimen" name="car_app_ui_nav_card_padding_horizontal" />
+      <!-- Horizontal space between an image and a text inside a navigation card. -->
+      <item type="dimen" name="car_app_ui_nav_card_image_to_text_spacing_horizontal" />
+      <!-- Vertical space between an image and a text inside a navigation card. -->
+      <item type="dimen" name="car_app_ui_nav_card_image_to_text_spacing_vertical" />
+      <!-- Size of xlarge text inside a navigation card. -->
+      <item type="dimen" name="car_app_ui_nav_card_xlarge_text_size" />
+      <!-- Size of large text inside a navigation card. -->
+      <item type="dimen" name="car_app_ui_nav_card_large_text_size" />
+      <!-- Vertical space applied in navigation card when lane images are present, for example. -->
+      <item type="dimen" name="car_app_ui_nav_card_small_padding_vertical" />
+      <!-- Navigation card width. If not set, the card width will be defined by the host in
+           proportion to the screen size. This value must be within the host defined maximum
+           range. -->
+      <item type="dimen" name="car_app_ui_nav_card_width" />
+      <!-- Size of small images inside a navigation card. -->
+      <item type="dimen" name="car_app_ui_nav_card_small_image_size" />
+      <!-- Size of large images inside a navigation card. -->
+      <item type="dimen" name="car_app_ui_nav_card_large_image_size" />
+      <!-- Size of an image inside a card header. -->
+      <item type="dimen" name="car_app_ui_card_header_image_size" />
+      <!-- Horizontal space between a text (e.g. a title) and the border of a card. -->
+      <item type="dimen" name="car_app_ui_card_header_text_padding_horizontal" />
+      <!-- Vertical space between a text (e.g. a title) and the border of a card. -->
+      <item type="dimen" name="car_app_ui_card_header_text_padding_vertical" />
+      <!-- Horizontal space between a text (e.g. a title) and the border of a card when no header
+           button is included. -->
+      <item type="dimen" name="car_app_ui_card_header_no_button_text_margin_start" />
+      <!-- Vertical space between grid items -->
+      <item type="dimen" name="car_app_ui_grid_item_vertical_spacing" />
+      <!-- Vertical space between an image and a text inside a grid item. -->
+      <item type="dimen" name="car_app_ui_grid_item_image_to_text_spacing_vertical" />
+      <!-- Vertical space between an two texts inside a grid item. -->
+      <item type="dimen" name="car_app_ui_grid_item_text_to_text_spacing_vertical" />
+      <!-- Buttons height. -->
+      <item type="dimen" name="car_app_ui_button_height" />
+      <!-- Image size inside a button. -->
+      <item type="dimen" name="car_app_ui_button_image_size" />
+      <!-- Horizontal space between the start and end sides of a FAB or button and the action
+           text. The spacing is applied only when the button only has the text.
+           If `car_app_ui_action_button_list_button_content_alignment` is set to 1 (left) or 2 (right), this value will be ignored. -->
+      <item type="dimen" name="car_app_ui_button_text_horizontal_spacing" />
+      <!-- Horizontal space between the icon and the text in a FAB or button. -->
+      <item type="dimen" name="car_app_ui_icon_button_image_to_text_spacing" />
+      <!-- Horizontal space between the start side of a FAB or button and the action icon. The
+           spacing is applied only when the button has both icon and text.
+           If `car_app_ui_action_button_list_button_content_alignment` is set to 1 (left) or 2 (right), this value will be ignored. -->
+      <item type="dimen" name="car_app_ui_icon_button_start_spacing" />
+      <!-- Horizontal space between the end side of a FAB or button and the action icon. The
+           spacing is applied only when the button has both icon and text.
+           If `car_app_ui_action_button_list_button_content_alignment` is set to 1 (left) or 2 (right), this value will be ignored. -->
+      <item type="dimen" name="car_app_ui_icon_button_end_spacing" />
+      <!-- Corner radius applied to buttons. -->
+      <item type="dimen" name="car_app_ui_button_corner_radius" />
+      <!-- The maximum width of a button in the action button list, e.g. used in PaneTemplate.
+      This value will be used only when `car_app_ui_action_button_list_button_stretch_horizontal` is set to `true`. -->
+      <item type="dimen" name="car_app_ui_action_button_list_button_max_width" />
+      <!-- The horizontal spacing around the content in a button in the action button list, e.g. used in PaneTemplate.
+      This value will be used only when `car_app_ui_action_button_list_button_content_alignment` is set to 1 (left) or 2 (right).
+      When this value is used, `car_app_ui_icon_button_start_spacing`, `car_app_ui_icon_button_end_spacing`, and `car_app_ui_button_text_horizontal_spacing` will be ignored. -->
+      <item type="dimen" name="car_app_ui_button_side_alignment_spacing" />
+      <!-- Edit box top vertical space -->
+      <item type="dimen" name="car_app_ui_edit_text_top_padding" />
+      <!-- Edit box bottom vertical space -->
+      <item type="dimen" name="car_app_ui_edit_text_bottom_padding" />
+      <!-- Edit box start side horizontal space -->
+      <item type="dimen" name="car_app_ui_edit_text_start_padding" />
+      <!-- Edit box end side horizontal space -->
+      <item type="dimen" name="car_app_ui_edit_text_end_padding" />
+      <!-- Vertical space between the edit box and the associated error message. -->
+      <item type="dimen" name="car_app_ui_edit_text_error_vertical_spacing" />
+      <!-- Horizontal space between the edit box error message and its container. -->
+      <item type="dimen" name="car_app_ui_edit_text_error_horizontal_spacing" />
+      <!-- Horizontal space around the text in read-only boxes (such as the PIN code in Sign-In
+           template). -->
+      <item type="dimen" name="car_app_ui_read_only_text_padding" />
+      <!-- Width of a border around or under the edit box, showing the different states of the box. -->
+      <item type="dimen" name="car_app_ui_edit_text_border_width"/>
+      <!-- Start padding to list items in full lists (such as ListTemplate) -->
+      <item type="dimen" name="car_app_ui_full_row_start_padding" />
+      <!-- End padding to list items in full lists (such as ListTemplate) -->
+      <item type="dimen" name="car_app_ui_full_row_end_padding" />
+      <!-- Minimum height of a list item in half lists (such as PlaceListMapTemplate) -->
+      <item type="dimen" name="car_app_ui_half_row_min_height" />
+      <!-- Horizontal space around list items in half lists (such as PlaceListMapTemplate) -->
+      <item type="dimen" name="car_app_ui_half_row_horizontal_padding" />
+      <!-- Vertical space around list items in half lists (such as PlaceListMapTemplate) -->
+      <item type="dimen" name="car_app_ui_half_row_vertical_padding" />
+      <!-- Horizontal space between image and text in half lists (such as PlaceListMapTemplate) -->
+      <item type="dimen" name="car_app_ui_half_row_image_to_text_spacing" />
+      <!-- Horizontal space between two texts in half lists (such as PlaceListMapTemplate) -->
+      <item type="dimen" name="car_app_ui_half_row_text_to_text_spacing" />
+      <!-- Image sizes in half lists (such as PlaceListMapTemplate) -->
+      <item type="dimen" name="car_app_ui_half_row_image_size" />
+      <!-- Sign-in template authentication methods max width. -->
+      <item type="dimen" name="car_app_ui_sign_in_method_max_width" />
+
+      <!-- Drawable used for action buttons background. The default value will render these
+           actions as solid rectangles with rounded corners (corner radius defined by
+           'car_app_ui_button_corner_radius'). Background color will be
+           'car_app_ui_action_button_default_background_color' or
+           'car_app_ui_action_button_primary_background_color', depending on whether the button
+           is primary or not.
+           Buttons have the following custom selectors:
+           <ul>
+              <li>type_primary: Indicates the button is a primary one.
+              <li>type_custom: Indicate the colors of this button depend on app provided colors.
+           </ul>
+           When a button is marked as 'custom', the app provided background color is applied as a
+           tint over this drawable. -->
+      <item type="drawable" name="car_app_ui_action_button_background" />
+
+      <!-- Maximum number of items to show in a list. This can't be lower than 6 -->
+      <item type="integer" name="car_app_ui_list_max_length" />
+      <!-- Maximum number of items to show in a grid. This can't be lower than 6 -->
+      <item type="integer" name="car_app_ui_grid_max_length" />
+      <!-- Indicates the horizontal order that OEMs pick for the primary action
+           on selected templates.
+           <ul>
+             <li>0 means no re-order
+             <li>1 indicates primary action should be on the left
+             <li>2 indicates primary action should be on the right
+           </ul>
+           On horizontal buttons,
+           -->
+      <item type="integer" name="car_app_ui_action_button_primary_horizontal_order" />
+
+      <!-- The gravity of action button list (e.g. used in MessageTemplate and PaneTemplate).
+           The possible values are:
+           <ul>
+             <li>0: center (default)
+             <li>1: bottom
+           </ul> -->
+      <item type="integer" name="car_app_ui_action_button_list_gravity" />
+      <!-- The alignment of contents in buttons in the action button list (e.g. used in PaneTemplate).
+           The possible values are:
+           <ul>
+             <li>0: center (default)
+             <li>1: left
+             <li>2: right
+           </ul> -->
+      <item type="integer" name="car_app_ui_action_button_list_button_content_alignment" />
+      <!-- Layout gravity for content areas (e.g content vertical alignment in Sign In Template
+           content).-->
+      <item type="integer" name="car_app_ui_content_layout_gravity"/>
+      <!-- Content gravity for content areas (e.g. content horizontal alignment in Sign In
+           Template content). -->
+      <item type="integer" name="car_app_ui_content_gravity"/>
+
+      <!-- General paragraph text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.TextBlock" />
+      <!-- Sign-in header text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.SignInHeader" />
+      <!-- Sign-in legal notice text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.SignInLegal" />
+      <!-- Card header appareance (e.g. Place List Template) -->
+      <item type="style" name="TextAppearance.CarAppUi.CardHeader" />
+      <!-- Grid item title text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.GridItemTitle" />
+      <!-- Grid item description text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.GridItemText" />
+      <!-- Buttons text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.ButtonText" />
+      <!-- Read-only text appareance -->
+      <item type="style" name="TextAppearance.CarAppUi.ReadOnlyText"/>
+      <!-- Style applied to input views (e.g. Sign-In username box) -->
+      <item type="style" name="Widget.CarAppUi.InputView" />
+      <!-- Style applied to edit boxes -->
+      <item type="style" name="Widget.CarAppUi.EditText" />
+      <!-- Style applied to row sections headers (such as in ListTemplate) -->
+      <item type="style" name="Widget.CarAppUi.RowSectionHeader" />
+      <!-- Style applied to row title (such as in ListTemplate) -->
+      <item type="style" name="Widget.CarAppUi.RowTitle" />
+      <!-- Style applied to row secondary text (such as in ListTemplate) -->
+      <item type="style" name="Widget.CarAppUi.RowSecondary" />
+      <!-- Style applied to list empty text (such as in ListTemplate) -->
+      <item type="style" name="Widget.CarAppUi.RowListEmpty" />
+    </policy>
+  </overlayable>
+</resources>

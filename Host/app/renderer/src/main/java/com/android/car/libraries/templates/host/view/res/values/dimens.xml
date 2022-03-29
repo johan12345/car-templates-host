@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+
+  <!-- Adaptive height and width spacing key lines. -->
+  <dimen name="template_height_keyline_0">@dimen/default_height_keyline_0</dimen>
+  <dimen name="template_height_keyline_1">@dimen/default_height_keyline_1</dimen>
+  <dimen name="template_height_keyline_2">@dimen/default_height_keyline_2</dimen>
+  <dimen name="template_height_keyline_3">@dimen/default_height_keyline_3</dimen>
+  <dimen name="template_width_keyline_0">@dimen/default_width_keyline_0</dimen>
+  <dimen name="template_width_keyline_1">@dimen/default_width_keyline_1</dimen>
+  <dimen name="template_width_keyline_2">@dimen/default_width_keyline_2</dimen>
+  <dimen name="template_width_keyline_3">@dimen/default_width_keyline_3</dimen>
+
+  <!-- Padding. -->
+  <dimen name="template_padding_0">@dimen/default_padding_0</dimen>
+  <dimen name="template_padding_1">@dimen/default_padding_1</dimen>
+  <dimen name="template_padding_2">@dimen/default_padding_2</dimen>
+  <dimen name="template_padding_3">@dimen/default_padding_3</dimen>
+  <dimen name="template_padding_4">@dimen/default_padding_4</dimen>
+  <dimen name="template_padding_5">@dimen/default_padding_5</dimen>
+  <dimen name="template_padding_6">@dimen/default_padding_6</dimen>
+  <dimen name="template_padding_7">@dimen/default_padding_7</dimen>
+  <dimen name="template_padding_8">@dimen/default_padding_8</dimen>
+
+  <!-- Minimum tap target size, used for buttons, etc. -->
+  <dimen name="template_min_tap_target_size">68dp</dimen>
+
+  <!--
+  Edge column definition
+
+  These values are used to align UI elements at the edge of the screen, even if
+  the elements belong to completely different layouts.
+  -->
+  <dimen name="template_edge_column_width">@dimen/default_edge_column_width</dimen>
+  <dimen name="template_edge_column_margin">@dimen/default_edge_column_margin</dimen>
+
+  <!--
+  This dimen represents the entire width of the edge column, margin included.
+
+  It should remain equal to:
+  2 * template_edge_column_margin + template_edge_column_width
+  -->
+  <dimen name="template_edge_column_width_padded">@dimen/default_edge_column_width_padded</dimen>
+
+  <!-- A minimum margin value used to offset some of the text views
+      in the UI. -->
+  <dimen name="template_min_text_margin">8dp</dimen>
+
+  <!-- Common dimensions. -->
+  <item name="template_adaptive_width_fraction" format="float" type="dimen">.76</item>
+  <dimen name="template_button_touch_target_size">@dimen/car_app_ui_touch_target_size</dimen>
+
+  <!-- Images. -->
+  <dimen name="template_large_image_size">@dimen/car_app_ui_large_image_size</dimen>
+  <dimen name="template_large_image_size_min">0dp</dimen>
+  <dimen name="template_large_image_size_max">128dp</dimen>
+
+  <!-- Markers. -->
+  <dimen name="template_marker_pointer_width">16dp</dimen>
+  <dimen name="template_marker_pointer_height">10dp</dimen>
+  <dimen name="template_marker_text_horizontal_padding">8dp</dimen>
+  <dimen name="template_marker_icon_size">32dp</dimen>
+  <dimen name="template_marker_stroke">2dp</dimen>
+  <dimen name="template_marker_corner_radius">8dp</dimen>
+  <dimen name="template_marker_image_size">36dp</dimen>
+  <dimen name="template_marker_image_corner_radius">4dp</dimen>
+  <dimen name="template_marker_padding">2dp</dimen>
+
+  <!-- Plain content containers. -->
+  <dimen name="template_plain_content_container_width">400dp</dimen>
+  <dimen name="template_plain_content_container_padding">10dp</dimen>
+  <dimen name="template_plain_content_horizontal_padding">@dimen/car_app_ui_content_horizontal_margin</dimen>
+
+  <!-- Card content containers. -->
+  <dimen name="template_card_content_container_default_width">384dp</dimen>
+  <dimen name="template_card_content_container_min_width">360dp</dimen>
+  <dimen name="template_card_content_container_max_width">416dp</dimen>
+  <dimen name="template_card_content_container_oem_max_width">500dp</dimen>
+  <dimen name="template_card_content_container_start_margin">@dimen/car_app_ui_card_start_margin</dimen>
+  <dimen name="template_card_content_container_top_margin">@dimen/car_app_ui_card_top_margin</dimen>
+  <dimen name="template_card_content_container_bottom_margin">@dimen/template_width_keyline_1</dimen>
+  <dimen name="template_card_content_container_min_height">200dp</dimen>
+
+  <!-- Card container width fractions. Zero means we use the layout_width, not the fraction. -->
+  <item name="template_card_content_container_width_fraction" format="float" type="dimen">.48</item>
+  <item name="template_steps_card_content_container_width_fraction" format="float" type="dimen">.4</item>
+
+  <!-- Corresponds to +5 elevation in material spec:
+       https://standards.google/guidelines/google-material/styles/elevation.html#spec -->
+  <dimen name="template_card_content_container_elevation">12dp</dimen>
+  <dimen name="template_card_content_container_border_width">2dp</dimen>
+
+  <!-- Headers. -->
+  <dimen name="template_header_height">68dp</dimen>
+  <dimen name="template_header_text_vertical_spacing">@dimen/car_app_ui_card_header_text_padding_vertical</dimen>
+  <dimen name="template_header_text_horizontal_spacing">@dimen/car_app_ui_card_header_text_padding_horizontal</dimen>
+  <dimen name="template_header_button_icon_size">@dimen/car_app_ui_card_header_image_size</dimen>
+  <dimen name="template_header_button_start_spacing">0dp</dimen>
+  <dimen name="template_header_text_no_icon_start_spacing">@dimen/car_app_ui_card_header_no_button_text_margin_start</dimen>
+
+  <dimen name="template_header_button_focus_inset">4dp</dimen>
+
+  <!-- Lists. -->
+  <dimen name="template_row_list_max_width">@dimen/default_canvas_max_width</dimen>
+  <dimen name="template_row_list_no_scrollbar_start_padding_card">@dimen/template_padding_1</dimen>
+
+  <!-- Row List. -->
+  <dimen name="template_row_list_large_image_container_max_width">480dp</dimen>
+
+  <!-- Rows. -->
+  <dimen name="template_row_min_height">72dp</dimen>
+  <dimen name="template_row_corner_radius">@dimen/default_list_item_corner_radius</dimen>
+  <dimen name="template_row_icon_size">36dp</dimen>
+  <dimen name="template_row_image_size_small">36dp</dimen>
+  <dimen name="template_row_image_size_large">64dp</dimen>
+  <dimen name="template_row_action_max_width">240dp</dimen>
+  <dimen name="template_row_marker_min_size">36dp</dimen>
+  <dimen name="template_row_marker_label_margin">15dp</dimen>
+  <dimen name="template_row_horizontal_padding">@dimen/template_width_keyline_1</dimen>
+  <dimen name="template_row_horizontal_half_padding">@dimen/template_width_keyline_0</dimen>
+  <dimen name="template_row_text_horizontal_padding">@dimen/template_width_keyline_0</dimen>
+  <dimen name="template_row_text_horizontal_half_padding">@dimen/template_padding_0</dimen>
+  <dimen name="template_row_background_sectional_bottom_margin">@dimen/template_padding_3</dimen>
+  <dimen name="template_half_list_bottom_padding">@dimen/default_height_keyline_3</dimen>
+  <dimen name="template_half_row_padding_vertical">@dimen/default_padding_4</dimen>
+
+  <!-- Half Rows. -->
+  <dimen name="template_half_row_horizontal_padding">@dimen/car_app_ui_half_row_horizontal_padding</dimen>
+  <dimen name="template_half_row_vertical_padding">@dimen/car_app_ui_half_row_vertical_padding</dimen>
+  <dimen name="template_half_row_image_to_text_margin">@dimen/car_app_ui_half_row_image_to_text_spacing</dimen>
+  <dimen name="template_half_row_text_to_text_margin">@dimen/car_app_ui_half_row_text_to_text_spacing</dimen>
+  <dimen name="template_half_row_image_size">@dimen/car_app_ui_half_row_image_size</dimen>
+
+  <!-- Full Rows. -->
+  <dimen name="template_full_row_start_padding">@dimen/car_app_ui_full_row_start_padding</dimen>
+  <dimen name="template_full_row_end_padding">@dimen/car_app_ui_full_row_end_padding</dimen>
+  <dimen name="template_full_row_chevron_size">@dimen/car_ui_list_item_supplemental_icon_size</dimen>
+
+  <!-- Grids. -->
+  <dimen name="template_grid_max_width">@dimen/default_paged_list_view_max_content_width</dimen>
+
+  <!-- Grid items. -->
+  <dimen name="template_grid_item_image_bottom_padding">@dimen/car_app_ui_grid_item_image_to_text_spacing_vertical</dimen>
+  <dimen name="template_grid_item_text_container_max_width">196dp</dimen>
+  <dimen name="template_grid_item_text_bottom_padding">@dimen/car_app_ui_grid_item_text_to_text_spacing_vertical</dimen>
+  <dimen name="template_grid_item_horizontal_spacing">@dimen/template_width_keyline_0</dimen>
+  <dimen name="template_grid_item_vertical_spacing">@dimen/car_app_ui_grid_item_vertical_spacing</dimen>
+
+  <dimen name="template_grid_item_corner_radius">@dimen/default_list_item_corner_radius</dimen>
+  <dimen name="template_grid_item_image_background_size">50dp</dimen>
+
+  <!-- Sign-In Template. -->
+  <dimen name="template_sign_in_method_view_max_width">@dimen/car_app_ui_sign_in_method_max_width</dimen>
+  <dimen name="template_sign_in_pin_text_letter_spacing" format="float" type="dimen">.6</dimen>
+  <dimen name="template_sign_in_input_error_message_text_size">18dp</dimen>
+  <dimen name="template_sign_in_input_additional_text_size">18dp</dimen>
+  <dimen name="template_sign_in_qr_code_image_width">250dp</dimen>
+
+  <!-- Read-only Text. -->
+  <dimen name="template_read_only_text_padding">@dimen/car_app_ui_read_only_text_padding</dimen>
+
+  <!-- Scrollbar. -->
+  <dimen name="template_paged_list_scrollbar_width">@dimen/template_edge_column_width_padded</dimen>
+  <dimen name="template_paged_list_scrollbar_width_card">68dp</dimen>
+
+  <!-- Dividers. -->
+  <dimen name="template_divider_thickness">1dp</dimen>
+
+  <!-- Action buttons and FABs. -->
+  <!-- Vertical margin in action button. -->
+  <dimen name="template_action_button_vertical_margin">@dimen/template_padding_2</dimen>
+
+  <!-- Action button list row vertical spacing. -->
+  <dimen name="template_action_button_list_row_vertical_spacing">@dimen/template_padding_2</dimen>
+
+  <!-- Min width common to buttons and FABs, when the action has text. -->
+  <dimen name="template_action_with_text_min_width">156dp</dimen>
+
+  <!-- The size of an icon inside of a FAB or button. -->
+  <dimen name="template_action_icon_size">@dimen/car_app_ui_button_image_size</dimen>
+  <dimen name="template_action_icon_size_min">0dp</dimen>
+  <!-- This max size should align with the max size we can set on the system toolbar. -->
+  <dimen name="template_action_icon_size_max">88dp</dimen>
+
+  <!-- The spacing between the start side of a FAB or button and the action icon.
+  The spacing is applied only when the button has both icon and text. -->
+  <dimen name="template_action_icon_text_start_spacing">@dimen/car_app_ui_icon_button_start_spacing</dimen>
+
+  <!-- The spacing between the end side of a FAB or button and the action icon.
+  The spacing is applied only when the button has both icon and text. -->
+  <dimen name="template_action_icon_text_end_spacing">@dimen/car_app_ui_icon_button_end_spacing</dimen>
+
+  <!-- The spacing between the icon and the text in a FAB or button. -->
+  <dimen name="template_action_icon_to_text_spacing">@dimen/car_app_ui_icon_button_image_to_text_spacing</dimen>
+
+  <!-- The spacing between the start and end sides of a FAB or button and the action text.
+  The spacing is applied only when the button only has the text. -->
+  <dimen name="template_action_text_horizontal_spacing">@dimen/car_app_ui_button_text_horizontal_spacing</dimen>
+
+  <!-- The width of the border for a secondary button, e.g. a button rendered
+       in the action strip in a full screen template. -->
+  <dimen name="template_action_button_secondary_border_width">2dp</dimen>
+
+  <!-- The padding around the action strip. -->
+  <dimen name="template_action_strip_padding">@dimen/car_ui_padding_3</dimen>
+
+  <!-- The vertical margin of the sticky buttons. -->
+  <dimen name="template_sticky_buttons_vertical_spacing">@dimen/car_ui_padding_2</dimen>
+
+  <!-- Toggles and radio buttons. -->
+  <dimen name="template_toggle_width">44dp</dimen>
+  <dimen name="template_toggle_height">24dp</dimen>
+  <dimen name="template_radio_button_size">24dp</dimen>
+
+  <!-- Focus. -->
+  <dimen name="template_focus_ring_stroke_width_hovered">@dimen/default_focus_ring_stroke_width_hovered</dimen>
+  <dimen name="template_focus_ring_stroke_width_focused">@dimen/default_focus_ring_stroke_width_focused</dimen>
+  <dimen name="template_back_focus_ring_inset">4dp</dimen>
+  <dimen name="template_search_focus_ring_inset">6dp</dimen>
+  <dimen name="template_action_fab_focus_ring_size">56dp</dimen>
+  <dimen name="template_focus_oval_ripple_inset">4dp</dimen>
+
+  <!-- Routing. -->
+  <dimen name="template_routing_image_span_body2_max_height">@dimen/default_body2_line_height</dimen>
+  <dimen name="template_routing_image_span_body3_max_height">@dimen/default_body3_line_height</dimen>
+  <dimen name="template_nav_card_large_image_size">@dimen/car_app_ui_nav_card_large_image_size</dimen>
+  <dimen name="template_nav_card_large_image_size_min">0dp</dimen>
+  <dimen name="template_nav_card_large_image_size_max">128dp</dimen>
+  <dimen name="template_nav_card_small_image_size">@dimen/car_app_ui_nav_card_small_image_size</dimen>
+  <dimen name="template_nav_card_small_image_size_min">0dp</dimen>
+  <dimen name="template_nav_card_small_image_size_max">72dp</dimen>
+  <dimen name="template_routing_lanes_image_container_height">55dp</dimen>
+
+  <dimen name="template_nav_card_padding_vertical">@dimen/car_app_ui_nav_card_padding_vertical</dimen>
+  <dimen name="template_nav_card_padding_horizontal">@dimen/car_app_ui_nav_card_padding_horizontal</dimen>
+  <dimen name="template_nav_card_small_padding_vertical">@dimen/car_app_ui_nav_card_small_padding_vertical</dimen>
+  <dimen name="template_steps_card_image_to_text_spacing_horizontal">@dimen/car_app_ui_nav_card_image_to_text_spacing_horizontal</dimen>
+  <dimen name="template_steps_card_image_to_text_spacing_vertical">@dimen/car_app_ui_nav_card_image_to_text_spacing_vertical</dimen>
+
+  <dimen name="template_steps_card_content_container_min_width">320dp</dimen>
+  <dimen name="template_steps_card_content_container_max_width">372dp</dimen>
+  <dimen name="template_steps_card_content_container_oem_max_width">500dp</dimen>
+  <dimen name="template_steps_card_content_container_min_height">100dp</dimen>
+
+  <!-- Message template. -->
+  <dimen name="template_message_title_top_spacing">@dimen/car_app_ui_image_to_text_spacing_vertical</dimen>
+  <dimen name="template_message_buttons_top_spacing">@dimen/car_app_ui_text_to_control_spacing_vertical</dimen>
+  <dimen name="template_message_debug_text_size">14dp</dimen>
+  <dimen name="template_message_debug_text_line_height">18dp</dimen>
+
+  <!-- Search template. -->
+  <dimen name="template_search_bar_max_width">580dp</dimen>
+
+  <!-- Status bar. -->
+  <dimen name="template_status_bar_minimum_top_padding">0dp</dimen>
+
+  <!-- No content view. -->
+  <dimen name="template_no_content_view_focus_corner_radius">@dimen/default_no_content_focus_background_corner_radius</dimen>
+
+  <!-- Use a negative padding value to draw the focus ring outside the no content view. -->
+  <dimen name="template_no_content_view_focus_ring_padding">-8dp</dimen>
+</resources>

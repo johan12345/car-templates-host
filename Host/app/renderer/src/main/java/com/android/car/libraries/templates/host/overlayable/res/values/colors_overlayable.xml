@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- LINT.IfChange -->
+<resources>
+  <!-- Color definitions that can be overridden by the OEMs.
+
+     !!! IMPORTANT !!!
+     Do not refer to these colors directly from views. Colors must be referred
+     to through theme attributes (in attrs.xml).
+
+     Any new resource added to this file should also be added to the
+     overlayable.xml before OEMs can customize them.
+
+     !!! IMPORTANT !!!
+     These resources must be added to the overlayable.xml file. DO NOT
+     add documentation here. Concentrate all documentation in public-ready
+     comments in the overlayable.xml file.
+     -->
+
+  <!-- Standard colores -->
+  <color name="car_app_ui_standard_red">@color/default_standard_red</color>
+  <color name="car_app_ui_standard_red_dark">@color/default_standard_red_dark</color>
+  <color name="car_app_ui_standard_green">@color/default_standard_green</color>
+  <color name="car_app_ui_standard_green_dark">@color/default_standard_green_dark</color>
+  <color name="car_app_ui_standard_blue">@color/default_standard_blue</color>
+  <color name="car_app_ui_standard_blue_dark">@color/default_standard_blue_dark</color>
+  <color name="car_app_ui_standard_yellow">@color/default_standard_yellow</color>
+  <color name="car_app_ui_standard_yellow_dark">@color/default_standard_yellow_dark</color>
+
+  <!-- Button -->
+  <color name="car_app_ui_action_button_default_background_color">@color/default_gray_846</color>
+  <color name="car_app_ui_action_button_primary_background_color">@color/default_standard_blue</color>
+  <color name="car_app_ui_action_button_text_color">@color/default_white</color>
+  <color name="car_app_ui_floating_button_default_background_color">@color/default_black</color>
+  <color name="car_app_ui_floating_button_default_text_color">@color/default_white</color>
+
+  <!-- Read-only Text -->
+  <color name="car_app_ui_read_only_text_color">@color/default_black</color>
+  <color name="car_app_ui_read_only_text_background_color">@color/default_white</color>
+
+  <!-- Edit Text -->
+  <color name="car_app_ui_edit_text_active_color">@color/car_app_ui_standard_blue</color>
+  <color name="car_app_ui_edit_text_enabled_color">@color/default_gradient_white_72</color>
+  <color name="car_app_ui_edit_text_error_color">@color/car_app_ui_standard_red</color>
+  <color name="car_app_ui_edit_text_disabled_color">@color/default_gradient_white_56</color>
+
+  <!-- Hyperlink Text -->
+  <color name="car_app_ui_hyperlink_text_color">@color/default_white</color>
+
+  <!-- Rows -->
+  <color name="car_app_ui_row_background_color">@color/car_ui_activity_background_color</color>
+
+  <!-- Grids -->
+  <color name="car_app_ui_grid_item_background_color">@color/car_ui_activity_background_color</color>
+
+</resources>
+<!-- LINT.ThenChange(overlayable.xml) -->

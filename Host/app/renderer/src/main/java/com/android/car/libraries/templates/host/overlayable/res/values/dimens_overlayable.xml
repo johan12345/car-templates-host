@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- LINT.IfChange -->
+<resources>
+  <!-- Dimension definitions that can be overridden by the OEMs.
+
+   !!! IMPORTANT !!!
+   Do not refer to these dimensions directly from views. Dimensions must be
+   referred to through theme attributes (in attrs.xml).
+
+   Any new resource added to this file should also be added to the
+   overlayable.xml before OEMs can customize them.
+
+   !!! IMPORTANT !!!
+   These resources must be added to the overlayable.xml file. DO NOT
+   add documentation here. Concentrate all documentation in public-ready
+   comments in the overlayable.xml file. -->
+
+  <!-- Template element spacing -->
+  <dimen name="car_app_ui_image_to_text_spacing_vertical">@dimen/car_ui_padding_4</dimen>
+  <dimen name="car_app_ui_text_to_control_spacing_vertical">@dimen/car_ui_padding_5</dimen>
+  <dimen name="car_app_ui_text_to_secondary_control_spacing_vertical">@dimen/car_ui_padding_7</dimen>
+  <dimen name="car_app_ui_control_to_text_spacing_vertical">@dimen/car_ui_padding_4</dimen>
+  <dimen name="car_app_ui_control_to_control_spacing_horizontal">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_content_horizontal_margin">24dp</dimen>
+  <dimen name="car_app_ui_touch_target_size">@dimen/car_ui_touch_target_size</dimen>
+
+  <!-- Template element corner radius -->
+  <dimen name="car_app_ui_corner_radius">8dp</dimen>
+
+  <!-- Card spacing -->
+  <dimen name="car_app_ui_card_start_margin">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_card_top_margin">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_card_width">0dp</dimen>
+
+  <!-- Template image sizing -->
+  <dimen name="car_app_ui_large_image_size">@dimen/car_ui_list_item_content_icon_width</dimen>
+
+  <!-- Navigation card spacing -->
+  <dimen name="car_app_ui_nav_card_padding_vertical">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_nav_card_padding_horizontal">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_nav_card_image_to_text_spacing_horizontal">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_nav_card_large_text_size">32sp</dimen>
+  <dimen name="car_app_ui_nav_card_xlarge_text_size">44sp</dimen>
+  <dimen name="car_app_ui_nav_card_small_padding_vertical">@dimen/car_ui_padding_1</dimen>
+  <dimen name="car_app_ui_nav_card_image_to_text_spacing_vertical">@dimen/car_ui_padding_1</dimen>
+  <dimen name="car_app_ui_nav_card_width">0dp</dimen>
+  <dimen name="car_app_ui_nav_card_small_image_size">36dp</dimen>
+  <dimen name="car_app_ui_nav_card_large_image_size">64dp</dimen>
+
+  <!-- Card header spacing/sizing -->
+  <dimen name="car_app_ui_card_header_image_size">44dp</dimen>
+  <dimen name="car_app_ui_card_header_text_padding_horizontal">@dimen/car_ui_padding_1</dimen>
+  <dimen name="car_app_ui_card_header_text_padding_vertical">@dimen/car_ui_padding_2</dimen>
+  <dimen name="car_app_ui_card_header_no_button_text_margin_start">@dimen/car_ui_padding_4</dimen>
+
+  <!-- Grid item spacing/sizing -->
+  <dimen name="car_app_ui_grid_item_vertical_spacing">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_grid_item_image_to_text_spacing_vertical">@dimen/car_ui_padding_1</dimen>
+  <dimen name="car_app_ui_grid_item_text_to_text_spacing_vertical">@dimen/car_ui_padding_1</dimen>
+
+  <!-- Button spacing/sizing -->
+  <dimen name="car_app_ui_button_height">56dp</dimen>
+  <dimen name="car_app_ui_button_image_size">36dp</dimen>
+  <dimen name="car_app_ui_icon_button_start_spacing">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_icon_button_end_spacing">@dimen/car_ui_padding_4</dimen>
+  <dimen name="car_app_ui_icon_button_image_to_text_spacing">@dimen/car_ui_padding_1</dimen>
+  <dimen name="car_app_ui_button_text_horizontal_spacing">@dimen/car_ui_padding_5</dimen>
+  <dimen name="car_app_ui_button_corner_radius">4dp</dimen>
+  <dimen name="car_app_ui_action_button_list_button_max_width">800dp</dimen>
+  <dimen name="car_app_ui_button_side_alignment_spacing">@dimen/car_ui_padding_4</dimen>
+
+  <!-- Edit text spacing/sizing -->
+  <dimen name="car_app_ui_edit_text_top_padding">@dimen/car_ui_padding_4</dimen>
+  <dimen name="car_app_ui_edit_text_bottom_padding">@dimen/car_ui_padding_4</dimen>
+  <dimen name="car_app_ui_edit_text_start_padding">@dimen/car_ui_padding_2</dimen>
+  <dimen name="car_app_ui_edit_text_end_padding">@dimen/car_ui_padding_4</dimen>
+  <dimen name="car_app_ui_edit_text_error_vertical_spacing">@dimen/car_ui_padding_1</dimen>
+  <dimen name="car_app_ui_edit_text_error_horizontal_spacing">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_edit_text_border_width">2dp</dimen>
+
+  <!-- Read-only Text. -->
+  <dimen name="car_app_ui_read_only_text_padding">@dimen/car_ui_padding_4</dimen>
+
+  <!-- Compact row spacing/sizing. These rows are used inside cards. -->
+  <dimen name="car_app_ui_half_row_min_height">0dp</dimen>
+  <dimen name="car_app_ui_half_row_horizontal_padding">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_half_row_vertical_padding">@dimen/car_ui_padding_2</dimen>
+  <dimen name="car_app_ui_half_row_image_to_text_spacing">@dimen/car_ui_padding_3</dimen>
+  <dimen name="car_app_ui_half_row_text_to_text_spacing">@dimen/car_ui_padding_0</dimen>
+  <dimen name="car_app_ui_half_row_image_size">44dp</dimen>
+
+  <!-- Full row spacing/sizing. -->
+  <dimen name="car_app_ui_full_row_start_padding">@dimen/car_ui_list_item_text_start_margin</dimen>
+  <dimen name="car_app_ui_full_row_end_padding">0dp</dimen>
+
+  <!-- Sign-in template spacing/sizing. -->
+  <dimen name="car_app_ui_sign_in_method_max_width">640dp</dimen>
+
+</resources>
+<!-- LINT.ThenChange(overlayable.xml) -->

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+  <!-- Colors used as the default value for overlayable resources.
+       These resources are not directly overlayable. -->
+  <color name="default_white">#FFFFFF</color>
+  <color name="default_gradient_white_12">#1FFFFFFF</color>
+  <color name="default_gradient_white_16">#29FFFFFF</color>
+  <color name="default_gradient_white_24">#3DFFFFFF</color>
+  <color name="default_gradient_white_40">#66FFFFFF</color>
+  <color name="default_gradient_white_46">#75FFFFFF</color>
+  <color name="default_gradient_white_56">#8FFFFFFF</color>
+  <color name="default_gradient_white_72">#B8FFFFFF</color>
+  <color name="default_gray_50">#F8F9FA</color>
+  <color name="default_gray_100">#F1F3F4</color>
+  <color name="default_gray_200">#E8EAED</color>
+  <color name="default_gray_300">#DADCE0</color>
+  <color name="default_gray_400">#BDC1C6</color>
+  <color name="default_gray_500">#9AA0A6</color>
+  <color name="default_gray_600">#80868B</color>
+  <color name="default_gray_700">#5F6368</color>
+  <color name="default_gray_800">#3C4043</color>
+  <color name="default_gray_846">#2E3134</color>
+  <color name="default_gray_868">#282A2D</color>
+  <color name="default_gray_878">#2A2A29</color>
+  <color name="default_gray_900">#202124</color>
+  <color name="default_gray_928">#17181B</color>
+  <color name="default_gray_958">#0E1013</color>
+  <color name="default_black">#000000</color>
+  <color name="default_gradient_black_0">#00000000</color>
+  <color name="default_gradient_black_25">#40000000</color>
+  <color name="default_gradient_black_64">#A3000000</color>
+  <color name="default_gradient_black_72">#B8000000</color>
+  <color name="default_gradient_black_85">#D9000000</color>
+  <color name="default_gradient_black_88">#E0000000</color>
+  <color name="default_gradient_black_100">#FF000000</color>
+
+  <!-- Default colors. -->
+  <color name="default_text_color">@color/default_white</color>
+
+  <!-- Standard colors  -->
+  <color name="default_standard_red">#FFEE675C</color>
+  <color name="default_standard_red_dark">#FFC5221F</color>
+  <color name="default_standard_green">#FF61AC70</color>
+  <color name="default_standard_green_dark">#FF448B47</color>
+  <color name="default_standard_blue">#FF669DF6</color>
+  <color name="default_standard_blue_dark">#FF3674E0</color>
+  <color name="default_standard_yellow">#FFE9A240</color>
+  <color name="default_standard_yellow_dark">#FFD5792D</color>
+
+  <!-- Default car app colors is customizable only with Car UI Library. -->
+  <color name="default_primary_color">@color/car_ui_text_color_primary</color>
+  <color name="default_primary_dark_color">@color/car_ui_text_color_primary</color>
+  <color name="default_secondary_color">@color/car_ui_text_color_secondary</color>
+  <color name="default_secondary_dark_color">@color/car_ui_text_color_secondary</color>
+
+  <!-- LINT.IfChange -->
+  <color name="default_hun_text_color">@color/default_white</color>
+  <color name="default_hun_text_color2">#8FFFFFFF</color>
+
+  <color name="default_card_text_color">@color/default_white</color>
+  <color name="default_background_color">@color/default_black</color>
+  <color name="default_card_background_color">@color/default_gray_846</color>
+  <color name="default_focus_blue">#4B9EFF</color>
+  <!-- LINT.ThenChange(../values-night/colors.xml) -->
+
+  <color name="default_message_debug_text_color">#FF57F1B1</color>
+
+  <color name="default_focus_no_content">#48FFFFFF</color>
+  <color name="default_controller_ripple_selector_color">#b27da9c7</color>
+  <color name="default_controller_ripple_color">#66ffffff</color>
+</resources>

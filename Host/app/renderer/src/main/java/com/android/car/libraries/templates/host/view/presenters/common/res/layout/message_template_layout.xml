@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/templatePlainContentContainerStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- A container for the contents of the screen, used so we can implement
+         margins that adapt to different screen sizes. Used as a container for
+         the header view.-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- A container for the template elements that is centered in the screen. -->
+        <com.android.car.ui.FocusArea
+            android:id="@+id/message_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="?templatePlainContentHorizontalPadding"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/sticky_action_button_focus_area"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UselessParent">
+
+            <!-- A progress indicator shown in place of the icon if the message
+                 template is in loading state-->
+            <FrameLayout
+                android:id="@+id/progress_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:visibility="gone">
+                <com.android.car.libraries.templates.host.view.widgets.common.CarProgressBar
+                    android:id="@+id/progress"
+                    style="?templateLoadingSpinnerStyle"
+                    android:layout_width="?templateLargeImageSize"
+                    android:layout_height="?templateLargeImageSize"
+                    app:imageMinSize="?templateLargeImageSizeMin"
+                    app:imageMaxSize="?templateLargeImageSizeMax"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <!-- An icon shown on top of the contents. -->
+            <com.android.car.libraries.templates.host.view.widgets.common.CarImageView
+                android:id="@+id/message_icon"
+                android:layout_width="?templateLargeImageSize"
+                android:layout_height="?templateLargeImageSize"
+                app:imageMinWidth="?templateLargeImageSizeMin"
+                app:imageMaxWidth="?templateLargeImageSizeMax"
+                app:imageMinHeight="?templateLargeImageSizeMin"
+                app:imageMaxHeight="?templateLargeImageSizeMax"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <!-- The title displayed below the icon. -->
+            <CarUiTextView
+                android:id="@+id/message_text"
+                style="?templateMessageTitleTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="?templateMessageTitleTopSpacing"
+                android:foreground="@drawable/no_content_view_focus_ring" />
+
+            <include
+                android:id="@+id/action_button_list_view"
+                layout="@layout/action_button_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?templateMessageButtonsTopSpacing"
+                android:visibility="gone" />
+        </com.android.car.ui.FocusArea>
+
+        <!-- Stack trace section, shown only in debug when clicking on the
+             action to view it. -->
+        <ScrollView
+            android:id="@+id/stack_trace_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/template_padding_4"
+            android:layout_marginBottom="@dimen/template_padding_1"
+            android:layout_marginStart="@dimen/template_width_keyline_2"
+            android:layout_marginEnd="@dimen/template_width_keyline_2"
+            android:padding="@dimen/template_padding_1"
+            android:focusable="false"
+            android:layout_gravity="top"
+            android:visibility="gone"
+            android:background="?templateDebugMessageBackgroundColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="RtlHardcoded">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CarUiTextView
+                    android:id="@+id/stack_trace"
+                    style="?templateMessageDebugTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </HorizontalScrollView>
+        </ScrollView>
+        <com.android.car.ui.FocusArea
+            android:id="@+id/sticky_action_button_focus_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <include
+                android:id="@+id/sticky_action_button_list_view"
+                layout="@layout/action_button_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?templateStickyButtonsVerticalSpacing"
+                android:layout_marginBottom="?templateStickyButtonsVerticalSpacing"
+                android:visibility="gone" />
+        </com.android.car.ui.FocusArea>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+

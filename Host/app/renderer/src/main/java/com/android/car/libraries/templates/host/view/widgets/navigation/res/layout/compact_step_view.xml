@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<com.android.car.libraries.templates.host.view.widgets.navigation.CompactStepView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="?templateNavCardSmallPaddingVertical"
+    android:paddingHorizontal="?templateNavCardPaddingHorizontal"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+  <!-- An image showing the turn icon on the left of the view. -->
+  <com.android.car.libraries.templates.host.view.widgets.common.CarImageView
+      android:id="@+id/compact_turn_symbol"
+      android:layout_width="?templateNavCardSmallImageSize"
+      android:layout_height="?templateNavCardSmallImageSize"
+      app:imageMinWidth="?templateNavCardSmallImageSizeMin"
+      app:imageMaxWidth="?templateNavCardSmallImageSizeMax"
+      app:imageMinHeight="?templateNavCardSmallImageSizeMin"
+      app:imageMaxHeight="?templateNavCardSmallImageSizeMax"
+      android:scaleType="fitCenter"
+      android:adjustViewBounds="true"
+      android:layout_gravity="center"
+      tools:ignore="ContentDescription" />
+
+  <!-- A text view displaying the description of the step, e.g. "Boggle St". -->
+  <CarUiTextView
+      android:id="@+id/compact_description_text"
+      style="?templateRoutingCompactDescriptionStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/template_steps_card_image_to_text_spacing_vertical"
+      android:layout_gravity="start|center" />
+</com.android.car.libraries.templates.host.view.widgets.navigation.CompactStepView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- LINT.IfChange -->
+<resources>
+  <!-- Style definitions that can be overridden by the OEMs.
+
+     !!! IMPORTANT !!!
+     Do not refer to these styles directly from views. Styles must be referred
+     to through theme attributes (in attrs.xml).
+
+     Any new resource added to this file should also be added to the
+     overlayable.xml before OEMs can customize them. -->
+
+  <!-- Template textAppearance -->
+  <style name="TextAppearance.CarAppUi.TextBlock" parent="TextAppearance.CarUi.Body2" />
+  <style name="TextAppearance.CarAppUi.SignInHeader" parent="TextAppearance.CarUi.Body2" />
+  <style name="TextAppearance.CarAppUi.SignInLegal" parent="TextAppearance.CarUi.Body3" />
+  <style name="TextAppearance.CarAppUi.CardHeader" parent="TextAppearance.CarUi.Body2" />
+  <style name="TextAppearance.CarAppUi.GridItemTitle" parent="TextAppearance.CarUi.Body2" />
+  <style name="TextAppearance.CarAppUi.GridItemText" parent="TextAppearance.CarUi.Body3">
+    <item name="android:textColor">@color/car_ui_text_color_secondary</item>
+  </style>
+  <style name="TextAppearance.CarAppUi.ButtonText" parent="TextAppearance.CarUi.Body3" />
+  <style name="TextAppearance.CarAppUi.ReadOnlyText" parent="TextAppearance.CarUi.Body3">
+    <item name="android:textColor">@color/car_app_ui_read_only_text_color</item>
+  </style>
+
+  <!-- Input view styling -->
+  <style name="Widget.CarAppUi.InputView" parent="">
+    <item name="android:gravity">start</item>
+  </style>
+
+  <!-- Edit text styling -->
+  <style name="Widget.CarAppUi.EditText" parent="android:Widget.DeviceDefault.EditText">
+    <item name="android:textColor">@color/default_edit_text_color_selector</item>
+    <item name="android:textColorHint">@color/default_edit_text_hint_color_selector</item>
+    <item name="android:paddingTop">@dimen/car_app_ui_edit_text_top_padding</item>
+    <item name="android:paddingBottom">@dimen/car_app_ui_edit_text_bottom_padding</item>
+    <item name="android:paddingStart">@dimen/car_app_ui_edit_text_start_padding</item>
+    <item name="android:paddingEnd">@dimen/car_app_ui_edit_text_end_padding</item>
+    <item name="android:background">@drawable/default_edit_text_background</item>
+    <item name="android:foreground">@drawable/default_edit_text_foreground</item>
+  </style>
+
+  <!-- The style of the list section header. -->
+  <style name="Widget.CarAppUi.RowSectionHeader" parent="TextAppearance.CarUi.ListItem.Header">
+    <item name="android:textAlignment">textStart</item>
+    <item name="android:layout_marginStart">@dimen/car_ui_padding_4</item>
+    <item name="android:layout_marginVertical">@dimen/car_ui_padding_2</item>
+  </style>
+
+  <!-- The style of the title text in a list row. -->
+  <style name="Widget.CarAppUi.RowTitle" parent="">
+    <item name="android:textAppearance">@style/TextAppearance.CarUi.ListItem</item>
+    <item name="android:textAlignment">viewStart</item>
+    <item name="android:singleLine">@bool/car_ui_list_item_single_line_title</item>
+  </style>
+
+  <!-- The style of the secondary text in a list row. -->
+  <style name="Widget.CarAppUi.RowSecondary" parent="">
+    <item name="android:textAppearance">@style/TextAppearance.CarUi.ListItem.Body</item>
+    <item name="android:textAlignment">viewStart</item>
+  </style>
+
+  <!-- The style of text that indicates a list is empty -->
+  <style name="Widget.CarAppUi.RowListEmpty" parent="Widget.CarAppUi.RowSecondary">
+    <item name="android:maxLines">2</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+</resources>
+<!-- LINT.ThenChange(overlayable.xml) -->

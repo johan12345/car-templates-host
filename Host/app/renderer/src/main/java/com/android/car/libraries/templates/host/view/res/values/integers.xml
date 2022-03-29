@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+  <integer name="template_grid_items_per_row">2</integer>
+
+  <!-- Actions. -->
+  <!--
+    Max ems to display for the button text if there is no icon.
+    Actual spec is 11ems, but TextView inserts the ellipsize after the maxems
+    value, so here the value is 11-1 to account for the ellipsize.
+  -->
+  <integer name="template_action_button_text_max_ems_no_icon">10</integer>
+
+  <!--
+    Max ems to display for the button text if there is an icon.
+    Actual spec is 10ems, but TextView inserts the ellipsize after the maxems
+    value, so here the value is 10-1 to account for the ellipsize.
+  -->
+  <integer name="template_action_button_text_max_ems_with_icon">9</integer>
+
+  <!--
+    Max ems to display for the fab text if there is no icon.
+    Actual spec is 7ems, but TextView inserts the ellipsize after the maxems
+    value, so here the value is 7-1 to account for the ellipsize.
+  -->
+  <integer name="template_fab_text_max_ems_no_icon">6</integer>
+
+  <!--
+    Max ems to display for the fab text if there is an icon.
+    Actual spec is 6ems, but TextView inserts the ellipsize after the maxems
+    value, so here the value is 6-1 to account for the ellipsize.
+  -->
+  <integer name="template_fab_text_max_ems_with_icon">5</integer>
+
+  <!--
+    Max ems to display for the provider sign-in button text.
+    TODO(b/184195457): remove the custom maxEms limit when we remove the limit for all
+  -->
+  <integer name="template_provider_sign_in_button_text_max_ems">100</integer>
+
+  <!-- Duration for the animation of templates switching. -->
+  <integer name="template_update_animation_duration_millis">300</integer>
+
+  <!-- Layout gravity for content areas (e.g content vertical alignment in Sign In Template
+       content).-->
+  <integer name="template_plain_content_layout_gravity">@integer/car_app_ui_content_layout_gravity</integer>
+
+  <!-- Content gravity for content areas (e.g. component horizontal alignment in Sign In
+       Template content). -->
+  <integer name="template_plain_content_gravity">@integer/car_app_ui_content_gravity</integer>
+
+  <!-- Gravity integer values (to be used as part of gravity overlayable attributes. -->
+  <integer name="gravity_bottom">80</integer>
+  <integer name="gravity_center">17</integer>
+  <integer name="gravity_center_horizontal">1</integer>
+  <integer name="gravity_center_vertical">16</integer>
+  <integer name="gravity_end">8388613</integer>
+  <integer name="gravity_left">3</integer>
+  <integer name="gravity_no_gravity">0</integer>
+  <integer name="gravity_right">5</integer>
+  <integer name="gravity_start">8388611</integer>
+  <integer name="gravity_top">48</integer>
+</resources>

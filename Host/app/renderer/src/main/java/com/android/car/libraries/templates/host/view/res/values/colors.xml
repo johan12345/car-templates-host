@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- Color definitions for the UI in the templates.
+
+     !!! IMPORTANT !!!
+     Do not refer to these colors directly from views. Colors must be referred
+     to through theme attributes (in attrs.xml).
+
+     !!! IMPORTANT !!!
+     Do not define colors with a RGB value in here (e.g. #FF9B4DF8). These
+     colors should all refer to colors defined in  @color/default.
+
+     If you need a color that's not there already, make a change to add it and
+     get that approved. -->
+<resources>
+
+  <color name="template_black">@color/default_black</color>
+  <color name="template_black_64">@color/default_gradient_black_64</color>
+
+  <color name="template_white">@color/default_white</color>
+  <color name="template_white_16">@color/default_gradient_white_16</color>
+  <color name="template_white_24">@color/default_gradient_white_24</color>
+  <color name="template_white_46">@color/default_gradient_white_46</color>
+  <color name="template_white_56">@color/default_gradient_white_56</color>
+  <color name="template_white_72">@color/default_gradient_white_72</color>
+
+  <color name="template_gray_50">@color/default_gray_50</color>
+  <color name="template_gray_100">@color/default_gray_100</color>
+  <color name="template_gray_400">@color/default_gray_400</color>
+  <color name="template_gray_500">@color/default_gray_500</color>
+  <color name="template_gray_700">@color/default_gray_700</color>
+  <color name="template_gray_846">@color/default_gray_846</color>
+  <color name="template_gray_868">@color/default_gray_868</color>
+  <color name="template_gray_878">@color/default_gray_878</color>
+  <color name="template_gray_900">@color/default_gray_900</color>
+  <color name="template_gray_928">@color/default_gray_928</color>
+
+  <!-- Standard colors  -->
+  <color name="template_standard_red">@color/car_app_ui_standard_red</color>
+  <color name="template_standard_red_dark">@color/car_app_ui_standard_red_dark</color>
+  <color name="template_standard_green">@color/car_app_ui_standard_green</color>
+  <color name="template_standard_green_dark">@color/car_app_ui_standard_green_dark</color>
+  <color name="template_standard_blue">@color/car_app_ui_standard_blue</color>
+  <color name="template_standard_blue_dark">@color/car_app_ui_standard_blue_dark</color>
+  <color name="template_standard_yellow">@color/car_app_ui_standard_yellow</color>
+  <color name="template_standard_yellow_dark">@color/car_app_ui_standard_yellow_dark</color>
+
+  <!-- Colors derived from OEM values. These values should be customized
+      through car_ui. -->
+  <color name="template_icon_tint_color">@color/car_ui_text_color_primary</color>
+  <color name="template_text_color_primary">@color/car_ui_text_color_primary</color>
+  <color name="template_card_background_color">@color/car_ui_activity_background_color</color>
+  <color name="template_plain_content_background_color">@color/car_ui_activity_background_color</color>
+
+  <!-- Color of text inside of a content view. -->
+  <color name="template_content_text_color">@color/template_gray_50</color>
+
+  <!-- Color of secondary text inside of a content view. -->
+  <color name="template_content_text_color_secondary">@color/template_gray_500</color>
+
+  <!-- Color of focus text inside of a content view. -->
+  <color name="template_content_text_color_focus">@color/template_standard_blue</color>
+
+  <!-- Map markers. -->
+  <color name="template_marker_default_background_color">@color/template_white</color>
+  <color name="template_marker_map_default_content_color">@color/template_black</color>
+  <color name="template_marker_list_default_content_color">@color/template_white</color>
+  <color name="template_marker_custom_background_content_color">@color/template_white</color>
+  <color name="template_marker_default_border_color">@color/template_gray_700</color>
+  <color name="template_marker_custom_border_color">@color/template_white</color>
+  <color name="template_anchor_default_background_color">@color/template_black</color>
+  <color name="template_anchor_border_color">@color/template_white</color>
+  <color name="template_anchor_dot_color">@color/template_white_56</color>
+
+  <!-- Content Containers. -->
+  <color name="template_container_background">@color/template_black</color>
+  <color name="template_content_button_color">@color/template_white</color>
+
+  <!-- Cards. -->
+  <color name="template_card_content_container_border_color">@color/template_white_24</color>
+
+  <!-- Toggles. -->
+  <color name="template_toggle_inactive_track">@color/template_white</color>
+  <color name="template_toggle_inactive_thumb">@color/template_gray_400</color>
+  <color name="template_toggle_active_track">@color/template_standard_blue</color>
+  <color name="template_toggle_active_thumb">@color/template_standard_blue</color>
+
+  <!-- Actions. -->
+  <color name="template_action_button_default_background_color">@color/car_app_ui_action_button_default_background_color</color>
+
+  <!-- Action strip FABs. -->
+  <color name="template_action_strip_fab_background_color">@color/car_app_ui_floating_button_default_background_color</color>
+  <color name="template_action_strip_fab_content_color">@color/car_app_ui_floating_button_default_text_color</color>
+
+  <!-- Message template. -->
+  <color name="template_message_debug_text_color">@color/default_message_debug_text_color</color>
+
+  <!-- Sign-in template. -->
+  <color name="template_sign_in_error_message_color">@color/template_standard_red</color>
+  <color name="template_sign_in_additional_text_color">@color/template_gray_500</color>
+
+  <!-- Read-only text. -->
+  <color name="template_read_only_text_background_color">@color/car_app_ui_read_only_text_background_color</color>
+
+  <!-- Ripples. -->
+  <color name="template_ripple_color">@color/default_controller_ripple_color</color>
+  <color name="template_ripple_selector_color">@color/default_controller_ripple_selector_color</color>
+
+  <!-- Status bar. -->
+  <color name="template_status_bar_end_color">@color/template_white</color>
+
+  <!-- Edit text. -->
+  <color name="template_edit_text_color_selector">@color/default_edit_text_color_selector</color>
+  <color name="template_edit_text_active_color">@color/car_app_ui_edit_text_active_color</color>
+  <color name="template_edit_text_enabled_color">@color/car_app_ui_edit_text_enabled_color</color>
+  <color name="template_edit_text_error_color">@color/car_app_ui_edit_text_error_color</color>
+  <color name="template_edit_text_disabled_color">@color/car_app_ui_edit_text_disabled_color</color>
+
+  <!-- Loading spinner. -->
+  <color name="template_loading_spinner_color">@color/template_standard_blue</color>
+
+</resources>

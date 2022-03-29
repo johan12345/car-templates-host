@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+gradle.ext.aaosLatestSDK = 31
+
+rootProject.name = "AOSPTemplateshost"
+include ':app'
+include ':app:apphost'
+include ':app:renderer'
+
+gradle.ext.lib_car_system_stubs = rootDir.absolutePath + "../../../../../../prebuilts/sdk/" + gradle.ext.aaosLatestSDK + "/system/android.car-system-stubs.jar"
+gradle.ext.lib_system_stubs = rootDir.absolutePath + "../../../../../../prebuilts/sdk/" + gradle.ext.aaosLatestSDK + "/system/android.jar"

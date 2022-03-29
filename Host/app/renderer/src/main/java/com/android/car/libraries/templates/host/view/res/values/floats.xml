@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+  <!-- GridItems. -->
+  <!-- Alpha value for the secondary text line in a grid item. -->
+  <item name="template_grid_item_text_alpha" format="float" type="dimen">0.72</item>
+
+  <!-- Navigation routing template. -->
+  <!-- Ratio of the image span (width/height) that should be used alongside text. -->
+  <item name="template_routing_image_span_ratio" format="float" type="dimen">3.0</item>
+
+  <!-- Row list template. -->
+  <!-- Aspect ratio of the PaneTemplate large image. -->
+  <item name="template_row_list_large_image_aspect_ratio" format="float" type="dimen">1.75</item>
+
+  <!-- Width ratio of the large image relative to the row list width -->
+  <item name="template_row_list_to_large_image_ratio" format="float" type="dimen">0.33</item>
+</resources>

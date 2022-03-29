@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- SearchTemplate Hint [CHAR_LIMIT=20] -->
+  <string name="search_hint">Search</string>
+
+  <!-- SearchTemplate Hint during the disabled state [CHAR_LIMIT=30] -->
+  <string name="search_hint_disabled">Not while driving</string>
+
+  <!-- VoiceTemplate state description for listening [CHAR_LIMIT=20] -->
+  <string name="state_listening">Listening</string>
+
+  <!-- VoiceTemplate state description for speaking [CHAR_LIMIT=20] -->
+  <string name="state_speaking">Speaking</string>
+
+  <!-- VoiceTemplate state description for mic muted [CHAR_LIMIT=50] -->
+  <string name="state_muted">Muted</string>
+
+  <!-- VoiceTemplate content description for microphone image [CHAR_LIMIT=20] -->
+  <string name="mic_icon" translatable="false">Microphone icon</string>
+
+  <!-- Text for meters abbreviation [CHAR_LIMIT=10] -->
+  <string name="meter_text">%s m</string>
+
+  <!-- Text for kilometers abbreviation [CHAR_LIMIT=10] -->
+  <string name="kilometer_text">%s km</string>
+
+  <!-- Text for feet abbreviation [CHAR_LIMIT=10] -->
+  <string name="feet_text">%s ft</string>
+
+  <!-- Text for miles abbreviation [CHAR_LIMIT=10] -->
+  <string name="mile_text">%s mi</string>
+
+  <!-- Text for yards abbreviation [CHAR_LIMIT=10] -->
+  <string name="yard_text">%s yd</string>
+
+  <!-- Message when lists have no items [CHAR_LIMIT=20] -->
+  <string name="template_list_no_items">No items</string>
+
+
+  <!-- A message shown while navigating to indicate when the user will arrive at their
+       destination. This combines a time of arrival with the short abbreviation of the
+       time zone it is in. Keep this short, as this is always present on-screen during
+       navigation. [CHAR_LIMIT=10] -->
+  <string name="time_at_destination_with_time_zone">
+    <xliff:g id="time_at_destination_with_time_zone" example="5:18 PM">%1$s</xliff:g>\u00A0<xliff:g id="short_time_zone" example="PST">%2$s</xliff:g>
+  </string>
+
+  <!-- The duration string that shows days only (e.g. "2 d"). [CHAR_LIMIT=10] -->
+  <string name="duration_in_days"><xliff:g example="2" id="days_count">%1$d</xliff:g> d</string>
+
+  <!-- The duration string that shows days and hours (e.g. "2 d 15 hr"). [CHAR_LIMIT=10] -->
+  <string name="duration_in_days_hours"><xliff:g example="2" id="days_count">%1$d</xliff:g> d <xliff:g example="15" id="hours_count">%2$d</xliff:g> hr</string>
+
+  <!-- The duration string that shows hours only (e.g. "23 hr"). [CHAR_LIMIT=10] -->
+  <string name="duration_in_hours"><xliff:g example="23" id="hours_count">%1$d</xliff:g> hr</string>
+
+  <!-- The duration string that shows hours and minutes (e.g. "23 hr 15 min"). [CHAR_LIMIT=10] -->
+  <string name="duration_in_hours_minutes"><xliff:g example="23" id="hours_count">%1$d</xliff:g> hr <xliff:g example="15" id="minutes_count">%2$d</xliff:g> min</string>
+
+  <!-- The duration string that shows minutes only (e.g. "15 min"). [CHAR_LIMIT=10] -->
+  <string name="duration_in_minutes"><xliff:g example="15" id="minutes_count">%1$d</xliff:g> min</string>
+
+  <!-- Toast message for user selecting action that can only be selected when parked [CHAR_LIMIT=40] -->
+  <string name="parked_only_action">Not available when driving</string>
+
+  <!-- Error message for client app exception [CHAR_LIMIT=70] -->
+  <string name="client_error_text"><xliff:g name="app">%s</xliff:g> has encountered an unexpected error</string>
+
+  <!-- Error message for client app exception [CHAR_LIMIT=10] -->
+  <string name="exit_text">Exit</string>
+
+  <!-- Error message for app requiring an older host than supported [CHAR_LIMIT=80] -->
+  <string name="app_api_too_old">This version of <xliff:g name="app">%s</xliff:g> is not supported. Please update.</string>
+
+  <!-- Error message for app requiring a newer host than available [CHAR_LIMIT=80] -->
+  <string name="host_api_too_old"><xliff:g name="app">%s</xliff:g> requires a newer version of Android Automotive Templates Host.</string>
+
+  <!-- Error message for application not responding [CHAR_LIMIT=100] -->
+  <string name="anr_message"><xliff:g name="app">%s</xliff:g> isn\'t responding</string>
+
+  <!-- Button text for waiting for ANR [CHAR_LIMIT=15] -->
+  <string name="anr_wait">Wait</string>
+
+  <!-- Error message for waiting for application to respond [CHAR_LIMIT=20] -->
+  <string name="anr_waiting">Waiting…</string>
+
+  <!-- Error message for the application not having required permission [CHAR_LIMIT=100] -->
+  <string name="missing_permission_text"><xliff:g name="app">%s</xliff:g> needs a required permission</string>
+
+  <!-- CarUxRestrictions Utility -->
+  <string name="car_app_ellipsis" translatable="false">&#8230;</string>
+
+  <!-- Message to indicate that the vehicle must be parked to continue using the app. [CHAR_LIMIT=50] -->
+  <string name="driving_state_message">You can\'t use this feature while driving</string>
+
+  <!-- Text for the rerouting state [CHAR_LIMIT=20] -->
+  <string name="rerouting_text">Rerouting</string>
+
+  <!-- Toast message for disabled action button in long message template. [CHAR_LIMIT=40] -->
+  <string name="long_message_disabled_action_text">Scroll to continue</string>
+</resources>

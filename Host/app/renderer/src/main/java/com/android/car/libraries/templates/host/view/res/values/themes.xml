@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+  <!-- The template app theme.
+
+       <p>This theme must be set on the root template view which is the parent of all the
+       template layouts and their child views.
+
+       <p>Styles used by this theme are named using the convention Type.Template.Etc
+       (for example {@code TextAppearance.Template.RowTitle}).-->
+
+  <style name="Theme.Template" parent="Theme.CarUi">
+
+    <!-- Common. -->
+    <item name="templateAdaptiveWidthFraction">@dimen/template_adaptive_width_fraction</item>
+    <!-- Margin between buttons placed side by side. -->
+    <item name="templateControlToControlSpacingHorizontal">@dimen/car_app_ui_control_to_control_spacing_horizontal</item>
+    <!-- Button height. -->
+    <item name="templateButtonHeight">@dimen/car_app_ui_button_height</item>
+    <!-- Corner radius used across the UI except for the buttons. -->
+    <item name="templateCornerRadius">@dimen/car_app_ui_corner_radius</item>
+    <!-- Corner radius used for the buttons. -->
+    <item name="templateButtonCornerRadius">@dimen/car_app_ui_button_corner_radius</item>
+
+    <!-- Standard colors.  -->
+    <item name="templateStandardBlue">@color/car_app_ui_standard_blue</item>
+    <item name="templateStandardRed">@color/car_app_ui_standard_red</item>
+    <item name="templateStandardGreen">@color/car_app_ui_standard_green</item>
+    <item name="templateStandardYellow">@color/car_app_ui_standard_yellow</item>
+
+    <!-- Images. -->
+    <item name="templateLargeImageSize">@dimen/template_large_image_size</item>
+    <item name="templateLargeImageSizeMin">@dimen/template_large_image_size_min</item>
+    <item name="templateLargeImageSizeMax">@dimen/template_large_image_size_max</item>
+
+    <!-- Sign In Template. -->
+    <item name="templateSignInContainerStyle">@style/Widget.Template.SignIn.Container</item>
+    <item name="templateSignInMethodViewMaxWidth">@dimen/template_sign_in_method_view_max_width</item>
+    <item name="templateSignInInstructionTextStyle">@style/Widget.Template.SignIn.InstructionText</item>
+    <item name="templateSignInProviderSignInButtonStyle">@style/Widget.Template.SignIn.ProviderSignInbutton</item>
+    <item name="templateSignInPinTextStyle">@style/Widget.Template.SignIn.PinText</item>
+    <item name="templateSignInPinBackgroundColor">@color/template_read_only_text_background_color</item>
+    <item name="templateSignInPinCornerRadius">?templateCornerRadius</item>
+    <item name="templateSignInPinBackground">@drawable/pin_sign_in_view_background</item>
+    <item name="templateSignInPinPadding">@dimen/template_read_only_text_padding</item>
+    <item name="templateSignInQRCodeImageWidth">@dimen/template_sign_in_qr_code_image_width</item>
+    <item name="templateSignInAdditionalTextStyle">@style/Widget.Template.SignIn.AdditionalText</item>
+    <item name="templateSignInErrorMessageStyle">@style/Widget.Template.SignIn.ErrorMessage</item>
+    <item name="templateSignInInputViewStyle">@style/Widget.CarAppUi.InputView</item>
+
+    <!-- Hyperlink Text -->
+    <item name="templateHyperlinkTextColor">@color/car_app_ui_hyperlink_text_color</item>
+
+    <!-- Map markers. -->
+    <item name="templateMapMarkerAppearance">@style/MarkerAppearance.Template.Map</item>
+    <item name="templateListMarkerAppearance">@style/MarkerAppearance.Template.List</item>
+
+    <!-- Loading spinners. -->
+    <item name="templateLoadingSpinnerStyle">@style/Widget.Template.Spinner</item>
+    <item name="templateLoadingSpinnerColor">@color/template_loading_spinner_color</item>
+
+    <!-- Plain content containers. -->
+    <item name="templatePlainContentContainerStyle">@style/Widget.Template.Container.Plain</item>
+    <item name="templatePlainContentContainerWidth">@dimen/template_plain_content_container_width</item>
+    <item name="templatePlainContentLayoutGravity">@integer/template_plain_content_layout_gravity</item>
+    <item name="templatePlainContentGravity">@integer/template_plain_content_gravity</item>
+    <item name="templatePlainContentHorizontalPadding">@dimen/template_plain_content_horizontal_padding</item>
+    <item name="templatePlainContentBackgroundColor">@color/template_plain_content_background_color</item>
+
+    <!-- Card content containers. -->
+    <item name="templateCardContentContainerStyle">@style/Widget.Template.Container.Card.Content</item>
+    <item name="templateCardRoutingContentContainerStyle">@style/Widget.Template.Container.Card.Content.Routing</item>
+    <item name="templateCardContentContainerDefaultWidth">@dimen/template_card_content_container_default_width</item>
+    <item name="templateCardContentContainerStartMargin">@dimen/template_card_content_container_start_margin</item>
+    <item name="templateCardContentContainerTopMargin">@dimen/template_card_content_container_top_margin</item>
+    <item name="templateCardContentContainerBottomMargin">@dimen/template_card_content_container_bottom_margin</item>
+    <item name="templateCardContentContainerMinHeight">@dimen/template_card_content_container_min_height</item>
+
+    <!-- Content headers. -->
+    <item name="templateHeaderHeight">@dimen/template_header_height</item>
+    <item name="templateHeaderTextVerticalSpacing">@dimen/template_header_text_vertical_spacing</item>
+    <item name="templateHeaderTextStartSpacing">@dimen/template_header_text_horizontal_spacing</item>
+    <item name="templateHeaderTextEndSpacing">@dimen/template_header_text_horizontal_spacing</item>
+    <item name="templateHeaderTextStyle">@style/TextAppearance.CarAppUi.CardHeader</item>
+    <item name="templateHeaderTextNoIconStartSpacing">@dimen/template_header_text_no_icon_start_spacing</item>
+    <item name="templateHeaderButtonIconSize">@dimen/template_header_button_icon_size</item>
+    <item name="templateHeaderButtonIconTint">@color/template_icon_tint_color</item>
+    <item name="templateHeaderButtonContainerSize">@dimen/template_button_touch_target_size</item>
+    <item name="templateHeaderButtonStartSpacing">@dimen/template_header_button_start_spacing</item>
+    <item name="templateHeaderButtonBackground">@drawable/template_header_button_background</item>
+    <item name="templateHeaderBackgroundColor">@color/template_container_background</item>
+
+    <!-- Dividers. -->
+    <item name="templateDividerThickness">@dimen/template_divider_thickness</item>
+    <item name="templateDividerColor">@color/default_gradient_white_24</item>
+
+    <!-- Rows. -->
+    <item name="templateRippleColor">@color/template_ripple_color</item>
+    <item name="templateRippleSelectorColor">@color/template_ripple_selector_color</item>
+    <item name="templateRowBackgroundColor">@color/car_app_ui_row_background_color</item>
+    <item name="templateRowSelectedBackgroundColor">@color/default_gray_878</item>
+    <item name="templateRowImagePlaceholderColor">@color/default_gray_928</item>
+    <item name="templateRowBackgroundSimple">@drawable/row_background_simple</item>
+    <item name="templateRowBackgroundSectionalMiddle">@drawable/row_background_sectional_middle</item>
+    <item name="templateRowBackgroundSectionalTop">@drawable/row_background_sectional_top</item>
+    <item name="templateRowBackgroundSectionalBottom">@drawable/row_background_sectional_bottom</item>
+    <item name="templateRowBackgroundSectionalTopBottom">@drawable/row_background_sectional_top_bottom</item>
+    <item name="templateRowBackgroundSectionalBottomMargin">@dimen/template_row_background_sectional_bottom_margin</item>
+    <item name="templateRowImagePlaceholder">@drawable/row_image_placeholder</item>
+    <item name="templateRowMinHeight">@dimen/template_row_min_height</item>
+    <item name="templateRowIconSize">@dimen/template_row_icon_size</item>
+    <item name="templateRowImageSizeSmall">@dimen/template_row_image_size_small</item>
+    <item name="templateRowImageSizeLarge">@dimen/template_row_image_size_large</item>
+    <item name="templateRowMarkerMinSize">@dimen/template_row_marker_min_size</item>
+    <item name="templateRowMarkerLabelMargin">@dimen/template_row_marker_label_margin</item>
+    <item name="templateRowDefaultIconTint">@color/template_icon_tint_color</item>
+    <item name="templateRowHorizontalPadding">@dimen/template_row_horizontal_padding</item>
+    <item name="templateRowHorizontalHalfPadding">@dimen/template_row_horizontal_half_padding</item>
+    <item name="templateRowTextHorizontalPadding">@dimen/template_row_text_horizontal_padding</item>
+    <item name="templateRowTextHorizontalHalfPadding">@dimen/template_row_text_horizontal_half_padding</item>
+    <item name="templateHalfListBottomPadding">@dimen/template_half_list_bottom_padding</item>
+    <item name="templateHalfListPaddingVertical">@dimen/template_half_row_padding_vertical</item>
+
+    <!-- Half rows. -->
+    <item name="templateHalfRowMinHeight">@dimen/car_app_ui_half_row_min_height</item>
+    <item name="templateHalfRowHorizontalPadding">@dimen/template_half_row_horizontal_padding</item>
+    <item name="templateHalfRowVerticalPadding">@dimen/template_half_row_vertical_padding</item>
+    <item name="templateHalfRowImageToTextSpacing">@dimen/template_half_row_image_to_text_margin</item>
+    <item name="templateHalfRowTextToTextSpacing">@dimen/template_half_row_text_to_text_margin</item>
+    <item name="templateHalfRowImageSize">@dimen/template_half_row_image_size</item>
+
+    <!-- Full rows. -->
+    <item name="templateFullRowStartPadding">@dimen/template_full_row_start_padding</item>
+    <item name="templateFullRowEndPadding">@dimen/template_full_row_end_padding</item>
+    <item name="templateFullRowChevronIcon">@drawable/car_ui_preference_icon_chevron</item>
+    <item name="templateHalfRowChevronIcon">@drawable/car_ui_preference_icon_chevron</item>
+    <item name="templateFullRowChevronHeight">@dimen/template_full_row_chevron_size</item>
+    <item name="templateFullRowChevronWidth">@dimen/template_full_row_chevron_size</item>
+
+    <!-- Note, these containers are sized to match the height of the title of the row
+         so that they appear vertically aligned at the center when both are top aligned. -->
+    <item name="templateRowSelectionContainerHeight">@dimen/default_body2_line_height</item>
+
+    <!-- Text styles for list elements. -->
+    <item name="templateRowTitleStyle">@style/Widget.CarAppUi.RowTitle</item>
+    <item name="templateRowSecondaryTextStyle">@style/Widget.CarAppUi.RowSecondary</item>
+    <item name="templateRowSectionHeaderStyle">@style/Widget.CarAppUi.RowSectionHeader</item>
+    <item name="templateRowListEmptyTextStyle">@style/Widget.CarAppUi.RowListEmpty</item>
+
+    <!-- The image dimensions (for PaneTemplate) in the row list template. -->
+    <item name="templateRowListToLargeImageRatio">@dimen/template_row_list_to_large_image_ratio</item>
+    <item name="templateRowListLargeImageContainerMaxWidth">@dimen/template_row_list_large_image_container_max_width</item>
+    <item name="templateRowListLargeImageAspectRatio">@dimen/template_row_list_large_image_aspect_ratio</item>
+
+    <!-- Padding between the (PaneTemplate) image and row list -->
+    <item name="templateRowListAndImagePadding">@dimen/default_width_keyline_1</item>
+
+    <!-- Grids. -->
+    <item name="templateGridStyle">@style/Widget.Template.Grid</item>
+
+    <!-- Grid items. -->
+    <item name="templateGridItemImageBottomPadding">@dimen/template_grid_item_image_bottom_padding</item>
+    <item name="templateGridItemDefaultIconTint">@color/template_icon_tint_color</item>
+    <item name="templateGridItemTextContainerMaxWidth">@dimen/template_grid_item_text_container_max_width</item>
+    <item name="templateGridItemTextBottomPadding">@dimen/template_grid_item_text_bottom_padding</item>
+    <item name="templateGridItemHorizontalSpacing">@dimen/template_grid_item_horizontal_spacing</item>
+    <item name="templateGridItemVerticalSpacing">@dimen/template_grid_item_vertical_spacing</item>
+    <item name="templateGridItemsPerRow">@integer/template_grid_items_per_row</item>
+    <item name="templateGridEmptyTextStyle">@style/Widget.Template.GridEmpty</item>
+    <item name="templateGridItemBackground">@drawable/template_grid_item_background</item>
+    <item name="templateGridItemBackgroundColor">@color/car_app_ui_grid_item_background_color</item>
+
+    <!-- Text styles for grid items. -->
+    <item name="templateGridItemTitleStyle">@style/Widget.Template.Text.GridItemTitle</item>
+    <item name="templateGridItemTextStyle">@style/Widget.Template.Text.GridItemText</item>
+
+    <!-- Action buttons and FABs. -->
+    <item name="templateActionButtonMargin">?templateControlToControlSpacingHorizontal</item>
+    <item name="templateActionButtonStyle">@style/Widget.Template.ActionButton</item>
+    <item name="templateActionButtonTextStyle">@style/Widget.Template.Text.ActionButton</item>
+    <item name="templateActionButtonForeground">@drawable/action_button_focus_ring</item>
+    <item name="templateActionButtonDefaultBackgroundColor">@color/car_app_ui_action_button_default_background_color</item>
+    <item name="templateActionButtonPrimaryBackgroundColor">@color/car_app_ui_action_button_primary_background_color</item>
+    <item name="templateActionButtonBackground">@drawable/car_app_ui_action_button_background</item>
+    <item name="templateActionButtonHeight">?templateButtonHeight</item>
+    <item name="templateActionButtonTouchTargetSize">@dimen/template_button_touch_target_size</item>
+    <item name="templateActionButtonListButtonStretchHorizontal">@bool/car_app_ui_action_button_list_button_stretch_horizontal</item>
+    <item name="templateActionButtonListGravity">@integer/car_app_ui_action_button_list_gravity</item>
+    <item name="templateActionButtonListButtonContentAlignment">@integer/car_app_ui_action_button_list_button_content_alignment</item>
+    <item name="templateActionButtonListButtonMaxWidth">@dimen/car_app_ui_action_button_list_button_max_width</item>
+    <item name="templateActionButtonSideAlignmentSpacing">@dimen/car_app_ui_button_side_alignment_spacing</item>
+    <item name="templateActionButtonListRowVerticalSpacing">@dimen/template_action_button_list_row_vertical_spacing</item>
+    <item name="templateActionIconSize">@dimen/template_action_icon_size</item>
+    <item name="templateActionIconSizeMin">@dimen/template_action_icon_size_min</item>
+    <item name="templateActionIconSizeMax">@dimen/template_action_icon_size_max</item>
+    <item name="templateActionIconTextStartSpacing">@dimen/template_action_icon_text_start_spacing</item>
+    <item name="templateActionIconTextEndSpacing">@dimen/template_action_icon_text_end_spacing</item>
+    <item name="templateActionIconToTextSpacing">@dimen/template_action_icon_to_text_spacing</item>
+    <item name="templateActionTextHorizontalSpacing">@dimen/template_action_text_horizontal_spacing</item>
+    <item name="templateActionWithTextMinWidth">@dimen/template_action_with_text_min_width</item>
+    <item name="templateActionButtonUseOemColors">@bool/car_app_ui_is_action_color_overridden</item>
+    <item name="templateActionButtonPrimaryHorizontalOrder">@integer/car_app_ui_action_button_primary_horizontal_order</item>
+    <!-- Min width common to buttons and FABs. It is the same as the height of
+        the action button so that the button appears with 1:1 aspect ratio when it has just
+        an icon inside. -->
+    <item name="templateActionWithoutTextMinWidth">?templateButtonHeight</item>
+    <item name="templateActionDefaultIconTint">@color/template_white</item>
+    <item name="templateActionButtonTextMaxEmsNoIcon">@integer/template_action_button_text_max_ems_no_icon</item>
+    <item name="templateActionButtonTextMaxEmsWithIcon">@integer/template_action_button_text_max_ems_with_icon</item>
+    <item name="templateFabTextMaxEmsNoIcon">@integer/template_fab_text_max_ems_no_icon</item>
+    <item name="templateFabTextMaxEmsWithIcon">@integer/template_fab_text_max_ems_with_icon</item>
+    <item name="templateActionButtonSecondaryBorderWidth">@dimen/template_action_button_secondary_border_width</item>
+    <item name="templateActionButtonSecondaryBorderColor">@color/template_white_46</item>
+    <item name="templateActionStripButtonMargin">?templateControlToControlSpacingHorizontal</item>
+    <item name="templateActionStripPadding">@dimen/template_action_strip_padding</item>
+
+    <item name="templateActionStripButtonBackgroundColor">@color/template_black</item>
+    <item name="templateActionStripFabAppearance">@style/FabAppearance.Template.Fab</item>
+    <item name="templateActionStripFullTemplateFabAppearance">@style/FabAppearance.Template.FullTemplate</item>
+
+    <!-- FAB background color.
+     They point to the same resource, which is set to a different value between light and dark modes. -->
+    <item name="templateActionStripFabBackgroundColorLight">@color/template_action_strip_fab_background_color</item>
+    <item name="templateActionStripFabBackgroundColorDark">@color/template_action_strip_fab_background_color</item>
+
+    <!-- Toggles and radio buttons. -->
+    <item name="templateToggleWidth">@dimen/template_toggle_width</item>
+    <item name="templateToggleHeight">@dimen/template_toggle_height</item>
+    <item name="templateToggleInactiveTrackColor">@color/template_toggle_inactive_track</item>
+    <item name="templateToggleInactiveThumbColor">@color/template_toggle_inactive_thumb</item>
+    <item name="templateToggleActiveTrackColor">@color/template_toggle_active_track</item>
+    <item name="templateToggleActiveThumbColor">@color/template_toggle_active_thumb</item>
+    <item name="templateRadioButtonSize">@dimen/template_radio_button_size</item>
+
+    <!-- Clickable spans. -->
+    <item name="templateClickableSpanHighlightForegroundColor">@color/template_black</item>
+    <item name="templateClickableSpanHighlightBackgroundColor">@color/template_focus_ring_color_selector</item>
+
+    <!-- Full screen message -->
+    <item name="templateMessageDefaultIconTint">@color/template_white</item>
+    <item name="templateMessageTitleTextStyle">@style/Widget.Template.Text.Message</item>
+    <item name="templateMessageTitleTopSpacing">@dimen/template_message_title_top_spacing</item>
+    <item name="templateMessageButtonsTopSpacing">@dimen/template_message_buttons_top_spacing</item>
+    <item name="templateStickyButtonsVerticalSpacing">@dimen/template_sticky_buttons_vertical_spacing</item>
+
+    <item name="templateMessageLongTextStyle">@style/Widget.Template.Text.LongMessage</item>
+    <item name="templateMessageDebugTextStyle">@style/Widget.Template.Debug</item>
+    <item name="templateDebugMessageBackgroundColor">@color/template_gray_900</item>
+
+    <!-- Focus. -->
+    <item name="templateFocusAccentColor">@color/template_focus_ring_color_selector</item>
+    <item name="templateFocusNoContentAccentColor">@color/default_focus_no_content</item>
+    <item name="templateFocusRingColor">@color/default_focus_blue</item>
+    <item name="templateFocusRingNoAccentColor">@color/default_focus_no_content</item>
+
+    <!-- EditText. -->
+    <item name="templateEditTextStyle">@style/Widget.CarAppUi.EditText</item>
+    <item name="templateEditTextActiveColor">@color/template_edit_text_active_color</item>
+    <item name="templateEditTextEnabledColor">@color/template_edit_text_enabled_color</item>
+    <item name="templateEditTextErrorColor">@color/template_edit_text_error_color</item>
+    <item name="templateEditTextDisabledColor">@color/template_edit_text_disabled_color</item>
+    <item name="templateEditTextErrorVerticalSpacing">@dimen/car_app_ui_edit_text_error_vertical_spacing</item>
+    <item name="templateEditTextErrorHorizontalSpacing">@dimen/car_app_ui_edit_text_error_horizontal_spacing</item>
+
+    <!-- Search bar. -->
+    <item name="templateSearchBarMaxWidth">@dimen/template_search_bar_max_width</item>
+    <item name="templateSearchBarIcon">@drawable/search_bar_icon</item>
+
+    <!-- Routing -->
+    <item name="templateRoutingStepsCardIconToDistanceSpacingHorizontal">@dimen/template_steps_card_image_to_text_spacing_horizontal</item>
+    <item name="templateRoutingImageSpanRatio">@dimen/template_routing_image_span_ratio</item>
+    <item name="templateRoutingImageSpanBody2MaxHeight">@dimen/template_routing_image_span_body2_max_height</item>
+    <item name="templateRoutingImageSpanBody3MaxHeight">@dimen/template_routing_image_span_body3_max_height</item>
+    <item name="templateNavCardLargeTextSize" format="dimension">@dimen/car_app_ui_nav_card_large_text_size</item>
+    <item name="templateNavCardXLargeTextSize" format="dimension">@dimen/car_app_ui_nav_card_xlarge_text_size</item>
+    <item name="templateNavCardLargeImageSize" format="dimension">@dimen/template_nav_card_large_image_size</item>
+    <item name="templateNavCardLargeImageSizeMin" format="dimension">@dimen/template_nav_card_large_image_size_min</item>
+    <item name="templateNavCardLargeImageSizeMax" format="dimension">@dimen/template_nav_card_large_image_size_max</item>
+    <item name="templateNavCardSmallImageSize" format="dimension">@dimen/template_nav_card_small_image_size</item>
+    <item name="templateNavCardSmallImageSizeMin" format="dimension">@dimen/template_nav_card_small_image_size_min</item>
+    <item name="templateNavCardSmallImageSizeMax" format="dimension">@dimen/template_nav_card_small_image_size_max</item>
+    <item name="templateNavCardFallbackContentColor">@color/default_white</item>
+    <item name="templateRoutingDistanceStyle">@style/Widget.Template.Routing.Distance</item>
+    <item name="templateRoutingDescriptionStyle">@style/Widget.Template.Routing.Description</item>
+    <item name="templateRoutingCompactDescriptionStyle">@style/Widget.Template.Routing.CompactDescription</item>
+    <item name="templateRoutingTravelEstimateStyle">@style/Widget.Template.Routing.TravelEstimate</item>
+    <item name="templateRoutingLanesImageContainerHeight">@dimen/template_routing_lanes_image_container_height</item>
+    <item name="templateRoutingLanesImageContainerVerticalPadding">@dimen/template_padding_0</item>
+    <item name="templateRoutingLanesImageContainerHorizontalPadding">@dimen/template_padding_2</item>
+    <item name="templateRoutingLanesImageBackgroundColor">@color/template_white_16</item>
+    <item name="templateRoutingJunctionImageBackgroundColor">@color/template_white_16</item>
+    <item name="templateRoutingMessagePrimaryStyle">@style/Widget.Template.Routing.MessagePrimary</item>
+    <item name="templateRoutingMessageSecondaryStyle">@style/Widget.Template.Routing.MessageSecondary</item>
+    <item name="templateRoutingMessageInnerPaddingHorizontal">@dimen/template_padding_3</item>
+    <item name="templateRoutingMessageInnerPaddingVertical">@dimen/template_padding_1</item>
+    <item name="templateNavCardPaddingHorizontal">@dimen/template_nav_card_padding_horizontal</item>
+    <item name="templateNavCardPaddingVertical">@dimen/template_nav_card_padding_vertical</item>
+    <item name="templateNavCardSmallPaddingVertical">@dimen/template_nav_card_small_padding_vertical</item>
+    <item name="templateRoutingStepsCardContentContainerMinWidth">@dimen/template_steps_card_content_container_min_width</item>
+    <item name="templateRoutingStepsCardContentContainerMinHeight">@dimen/template_steps_card_content_container_min_height</item>
+    <item name="templateRoutingDividerColor">@color/template_white_16</item>
+
+    <!-- Status bar gradient background start and end colors. -->
+    <item name="templateStatusBarStartColor">@android:color/transparent</item>
+    <item name="templateStatusBarEndColor">@color/template_status_bar_end_color</item>
+    <item name="templateStatusBarMinimumTopPadding">@dimen/template_status_bar_minimum_top_padding</item>
+
+    <!-- No content view. -->
+    <item name="templateNoContentFocusCornerRadius">@dimen/template_no_content_view_focus_corner_radius</item>
+
+    <!-- Animation. -->
+    <item name="templateUpdateAnimationDurationMilliseconds">@integer/template_update_animation_duration_millis</item>
+
+    <!-- This is necessary so that the floating elements such as the action
+         strip don't get their shadows clipped. -->
+    <item name="android:clipChildren">false</item>
+    <item name="android:clipToPadding">false</item>
+
+    <!-- The max number of rows in a list view. -->
+    <item name="templateListMaxLength">@integer/car_app_ui_list_max_length</item>
+
+    <!-- The max number of grid items in a grid view. -->
+    <item name="templateGridMaxLength">@integer/car_app_ui_grid_max_length</item>
+
+    <item name="templateSendNavStateToSystem">@bool/send_navstates_to_system</item>
+
+  </style>
+
+</resources>

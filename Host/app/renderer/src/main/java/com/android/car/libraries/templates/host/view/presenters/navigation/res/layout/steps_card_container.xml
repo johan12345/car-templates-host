@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2021 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!--
+The card has a minimum and maximum heights specific to the routing screen.
+The card is anchored to the top left of the screen which should be consistent
+with the rest of the card-style templates
+-->
+<com.android.car.libraries.templates.host.view.widgets.common.BleedingCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?templateCardRoutingContentContainerStyle"
+    android:focusable="false"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintVertical_bias="0.0"
+    app:layout_constraintHeight_default="wrap"
+    app:layout_constraintHeight_min="?templateRoutingStepsCardContentContainerMinHeight"
+    android:layout_marginStart="?templateCardContentContainerStartMargin"
+    android:layout_marginTop="?templateCardContentContainerTopMargin"
+    android:layout_marginBottom="?templateCardContentContainerBottomMargin"
+    android:layout_width="?templateRoutingStepsCardContentContainerMinWidth"
+    android:layout_height="0dp"
+    tools:ignore="MissingClass">
+
+  <!-- A view that shows a message. -->
+  <include
+      android:id="@+id/message_view"
+      android:visibility="gone"
+      layout="@layout/message_view" />
+
+  <!-- The container view for progress indicator. -->
+  <include
+    android:id="@+id/progress_view"
+    android:visibility="gone"
+    layout="@layout/progress_view" />
+
+  <!--  A container view for the driving instruction, such as the turn icon and
+        junction image.-->
+  <LinearLayout
+      android:id="@+id/steps_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <!-- A detailed view showing the current step. -->
+    <include
+        android:id="@+id/detailed_step_view"
+        layout="@layout/detailed_step_view" />
+
+    <!-- A divider between the current step and the next step. -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="?templateDividerThickness"
+        android:background="?templateRoutingDividerColor"/>
+
+    <!-- A compact view showing the next step. -->
+    <include
+        android:id="@+id/compact_step_view"
+        layout="@layout/compact_step_view" />
+
+    <!-- The optional junction image. -->
+    <FrameLayout
+        android:id="@+id/junction_image_container"
+        android:background="?templateRoutingJunctionImageBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:id="@+id/junction_image"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:clickable="false"
+          android:focusable="false"
+          android:scaleType="centerInside"
+          android:adjustViewBounds="true"
+          tools:ignore="ContentDescription" />
+    </FrameLayout>
+  </LinearLayout>
+</com.android.car.libraries.templates.host.view.widgets.common.BleedingCardView>
