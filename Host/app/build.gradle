@@ -56,8 +56,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
 
 
-    implementation "com.google.dagger:hilt-android:2.40.5"
-    kapt 'com.google.dagger:hilt-compiler:2.40.5'
+    implementation "com.google.dagger:hilt-android:2.42"
+    kapt 'com.google.dagger:hilt-compiler:2.42'
     runtimeOnly 'androidx.asynclayoutinflater:asynclayoutinflater:1.0.0'
 
 }

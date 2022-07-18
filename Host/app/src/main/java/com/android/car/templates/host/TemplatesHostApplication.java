@@ -16,8 +16,9 @@
 package com.android.car.templates.host;
 
 import android.app.Application;
+
 import dagger.hilt.android.HiltAndroidApp;
 
 /** This application class mark the whole application as Hilt application */
-@HiltAndroidApp(Application.class)
-public class TemplatesHostApplication extends Hilt_TemplatesHostApplication {}
+@HiltAndroidApp
+public class TemplatesHostApplication extends Application {}
