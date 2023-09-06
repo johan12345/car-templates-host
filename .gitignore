@@ -5,3 +5,4 @@ Host/app/build/**
 Host/app/apphost/build/**
 Host/app/renderer/build/**
 Host/local.properties
+Host/app/src/main/java/com/android/car/templates/host/view/widgets/maps/res/values/apikeys.xml

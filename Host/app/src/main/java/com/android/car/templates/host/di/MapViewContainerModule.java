@@ -16,7 +16,7 @@
 package com.android.car.templates.host.di;
 
 import com.android.car.libraries.templates.host.di.MapViewContainerFactory;
-import com.android.car.templates.host.view.widgets.maps.MapViewStubContainer;
+import com.android.car.templates.host.view.widgets.maps.MaplibreMapViewContainer;
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
@@ -28,7 +28,7 @@ import dagger.hilt.android.components.ServiceComponent;
 public final class MapViewContainerModule {
   @Provides
   static MapViewContainerFactory provideMapViewContainerFactory() {
-    return MapViewStubContainer::create;
+    return MaplibreMapViewContainer::create;
   }
 
   private MapViewContainerModule() {}

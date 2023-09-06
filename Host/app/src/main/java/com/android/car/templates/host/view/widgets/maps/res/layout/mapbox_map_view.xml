@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 
-<com.android.car.templates.host.view.widgets.maps.MapViewStub
+<com.mapbox.mapboxsdk.maps.MapView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/map_view"
     android:layout_width="match_parent"
