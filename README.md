@@ -4,4 +4,4 @@ This repository is a fork of the [AOSP template host](https://android.googlesour
 
 ## License
 Note that while the original [AOSP code](https://android.googlesource.com/platform/packages/apps/Car/Templates/) is under the Apache 2.0 License, my changes in this fork are distributed under GPL v3.
-For any questions regarding licensing, please [contact me directly](johan@vonforst.net).
+For any questions regarding licensing, please [contact me directly](mailto:johan@vonforst.net).
